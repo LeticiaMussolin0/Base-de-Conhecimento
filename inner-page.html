@@ -110,12 +110,25 @@
               <div class="accordion-item">
                 <h2 class="accordion-header">
                   <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    Accordion Item #1
+                    Consulta Rápida - Gerenciadora de Risco
                   </button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                   <div class="accordion-body">
-                    <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                    A função de <strong>Consulta Rápida</strong> permite efetuar uma Consulta na Gerenciadora de Risco para saber se o Conjunto pesquisado possui LIBERAÇÃO securitária.<br><br>
+                    Os dados de entrada para essa Consulta são: <br><br>
+
+                    <li><strong>Placa do Veículo:</strong> informar a placa do veículo. Se localizado, o APP retornará o conjunto vinculado;</li><br>
+                    <li><strong>Informar Destino, Origem, Produto e Valor:</strong> será efetuado uma Consulta diretamente na base de dados da Gerenciadora de Risco. O retorno será de acordo com o Cadastro no momento da Consulta.<br><br></li>
+                    
+                    <div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="../assets/img/gif.gif" alt="GIF da consulta rápida">
+                      <div class="card-body">
+                        <p class="card-text"><em>Qualquer dúvida e/ou divergência no retorno da PESQUISA deverá entrar em contato com a <a href="https://valida.vertticegr.com.br/anonymous/login">Gerenciadora de Risco. </a></em></p>
+
+                      </div>
+                    </div> 
+
                   </div>
                 </div>
               </div>
@@ -125,34 +138,38 @@
               <!-- Seção 2 -->
               <div class="accordion-item">
                 <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Accordion Item #2
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    Comprovante de Documento
                   </button>
                 </h2>
                 <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                   <div class="accordion-body">
-                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                    A Função de Comprovante de Documento permite aos Motoristas/Embarcadores/Administrativos/Operacionais enviarem os Comprovantes de Descarga obrigatórios de acordo com cada operação.<br><br>
+                    A função de Comprovante de Documento permite consultar o CT-e  de duas formas: <strong> Manual ou via Leitura do Código de Barras (CT-e ou CF-e)</strong>.<br><br>
+                    Os dados de entrada para pesquisa manual são:<br>
+                    <li>Número  do CT-e;</li>
+                    <li>Série do CT-e;</li>
+                    <li>CPF do Motorista</li><br>
+                    Para a leitura via Código de Barras, basta selecionar o Menu correspondente.<br><br>
+                    O sistema irá pesquisar o CT-e e retornará informando qual documento deverá ser anexado.<br> <br>
+                    Ao MODAL TANQUE, será solicitado informar a <strong> QUANTIDADE DE DESCARGA.</strong> Essa informação é obrigatória e deverá ser informada.<br><br>
+                    O Comprovante poderá ser fotografado no momento da pesquisa e ou buscar o arquivo direto da Galeria do Aparelho Celular.<br><br>
+                    Estas informações, depois de enviadas serão validadas pela Transvale Matriz para as emissões das faturas dos serviços realizados.<br><br>
+
+                    <div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="../assets/img/comprovante.png" alt="GIF da consulta rápida">
+                      <div class="card-body">
+                        <p class="card-text"><em>Consulta Manual. Para consulta com o código de barras, clique em <strong>"Ler Código de Barras"</strong>.</em></p>
+                        </div>
+                        
+
+                      
+
                   </div>
                 </div>
               </div>
             
-              <!-- Repita o código acima para criar Seções 3 até 20 -->
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseThree">
-                    Accordion Item #2
-                  </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                  </div>
-                </div>
-              </div>
-            
-            </div>
-            
-          </div>
+              
 
 
   </main><!-- End #main -->
@@ -163,11 +180,7 @@
     <div class="footer-newsletter">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-lg-6">
-            <h4>Join Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
+          
             </form>
           </div>
         </div>
@@ -192,11 +205,11 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              <ul>
+                <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="index.html#about">Sobre</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="index.html#services">Instruções</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="inner-page-two.html">Conhecimento</a></li>
             </ul>
           </div>
 
