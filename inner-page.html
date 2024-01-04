@@ -88,7 +88,9 @@
           <ol>
             <li><a href="index.html">Home</a></li>
             <li>Aplicativo Transvale</li>
+            
           </ol>
+          
         </div>
 
       </div>
@@ -101,24 +103,19 @@
   
           <div class="section-title">
         
-            <h3><span>ÍNDICE </span></h3>
-              <p>Nosso aplicativo e sistema próprio foram desenvolvidos para simplificar sua experiência, proporcionando praticidade e eficiência em cada etapa do processo.  </p>
-          
+            <h3><span>Instruções </span></h3>
+              <p>Selecione o tópico desejado para visualizar as informações.</p>
           </div>
  
-      
-
-      <!-- índice -->
-
        <!-- índice -->
       
-       <section class="inner-page">
+      <section class="inner-page">
     <div class="container">
 
       <div class="accordion accordion-flush" id="accordionFlushExample">
         <div class="accordion-item">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
               Consulta Rápida - Gerenciadora de Risco
             </button>
           </h2>
@@ -173,141 +170,183 @@
         <div class="accordion-item">
           <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-              Consulta Rápida - Gerenciadora de Risco
+              Consulta de Cheque
             </button>
           </h2>
           <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
             <div class="accordion-body">
-              A função de <strong>Consulta Rápida</strong> permite efetuar uma Consulta na Gerenciadora de Risco para saber se o Conjunto pesquisado possui LIBERAÇÃO securitária.<br><br>
+              Função que permite pesquisar o Status de um Cheque emitido. Os dados de Entrada são: <strong>Número do Cheque</strong><br><br>
+              O resultado será apresentado em tela no formato de Cartão.<br><br>
+              <em>Observação: Poderá existir mais de uma resposta a um cheque consultado devido a sua numeração.</em><br><br>
+
+              <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="../assets/img/consulta.jpeg" alt="GIF da consulta rápida">
+                <div class="card-body">
+                  <p class="card-text"><em>Os dados do cheque serão demonstrados após clicar em "consultar".</strong></em></p>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+              Emitir Ordem de Carregamento
+            </button>
+          </h2>
+          <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              A OC poderá ser emitida informando um Número de Contrato e/ou Consultando um Contrato. A consulta do Contrato estará condicionado a parametrização das empresas/filiais na qual o usuário logado tem acesso. Para efetuar a Consulta do Contrato, o botão EXIBIR TODOS deverá ser acionado.<br><br>
+              Os dados de entrada são:<br><br>
+              <li>Número do Contrato;</li>
+              <li>Consulta do Contrato através do botão <b>EXIBIR TODOS</b> (listará todos os contratos em aberto para seleção);</li><br>
+
+              <div class="card-group" style="width: 40rem;">
+                <div class="card">
+                  <img class="card-img-top" src="../assets/img/exibir.jpeg" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">EXIBIR TODOS</h5>
+                    <p class="card-text">Ao clicar sob "EXIBIR TODOS", os contratos em aberto serão listados.</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img class="card-img-top" src="../assets/img/exibir2.jpeg" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">ORDENAR POR</h5>
+                    <p class="card-text">Podemos filtrar/ordenar por Filial, Origem, Destino, etc.</p>
+                  </div>
+                </div>
+
+                  </div>
+
+              Quando um Contrato é Informado serão exibidas as seguintes informações, que poderão ser navegadas para consultar o detalhe:<br><br>
+              <li><b>Filial: </b>Filial do Contrato</li>
+              <li><b>Rota: </b>Rota do Contrato</li>
+              <li><b>Produto: </b>Produto do Contrato</li>
+              <li><b>Pagador: </b>Cliente Pagador do Contrato</li>
+              <li><b>Variantes: </b> Variantes do Contrato. Apenas a Variante com Status em Aberto poderá ser selecionada;</li>
+              <br>
+              <b>Ao selecionar a Variante será exibida duas opções:</b></li>
+                <ol>
+                <li>Detalhes: dados da Variante do Contrato;</li>
+                <li>Emissão da OC.</li>
+                </ol>
+                <b>Dentro da Emissão será aberto um formulário com os seguintes dados para entrada:</b><br>
+                <ol>
+                  <li><b>Placa do Cavalo: </b>Informar a Placa do Veículo. O sistema irá localizar o Conjunto Cadastrado e Ativo na base de dados do Maxicon. Se localizado os dados serão carregados nos campos específicos para Carreta 1, 2, 3 e Motorista (Nome e CPF);</li>
+                  <li><b>Valor da Mercadoria: </b></li>
+                  <li><b>Quantidade: </b></li>
+                  <li><b>Peso: </b></li>
+                  <li><b>Observação: </b></li>
+                </ol>
+                Após emissão gerado o documento da Ordem de Carregamento com possibilidade de compartilhamento do PDF.<br><br>
+                Na Consulta do Contrato, de acordo com a parametrização entre Usuário x Empresa, os contratos serão listados. Para Emissão da OC, basta selecionar o desejado e seguir conforme dados apresentados em tela.<br><br>
+                
+                <div class="card" style="width: 18rem;">
+                  <img class="card-img-top" src="../assets/img/ordem-carregamento.gif" alt="GIF da consulta rápida">
+                  <div class="card-body">
+                    <p class="card-text"><em>Emissão de OC à partir do n° do contrato.</strong></em></p>
+                    </div>
+                    </div>
             </div>
           </div>
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-              Accordion Item #3
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+              Consultar Ordem de Carregamento
             </button>
           </h2>
-          <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-              Accordion Item #3
-            </button>
-          </h2>
-          <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-          </div>
-        </div>
+          <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+            Possibilita Consultar uma Ordem de Carregamento já emitida, seja no Aplicativo ou no Maxicon (TAF27).<br><br>
+            Os dados de entrada para Consultar a Ordem de Carregamento são:<br>
+            <li><b>Filial</b></li>
+            <li><b>Número da Ordem de Carregamento</b></li> <br>
+            Se OC localizado, o PDF com o documento da Ordem de Carregamento será carregado em tela com possibilidade de compartilhamento do PDF.<br><br>
+
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="../assets/img/consultar-oc.jpeg" alt="GIF da consulta rápida">
+              <div class="card-body">
+                <p class="card-text">Insira o n° da OC para apresentá-la.</strong></p>
+                </div>
+            </div>
+           </div>
+         </div>
+       </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                      Aprovar/Reprovar Ordem de Carregamento
+                    </button>
+                  </h2>
+                  <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      Esta funcionalidade permite Aprovar ou Reprovar Ordens de Carregamento cujo Cadastro de Veículos e ou Clifor possuam restrições e ou bloqueios. Funcionalidade dedicada a Frota Própria Transvale e de uso Exclusivo da Matriz.<br><br>
         
+                    <div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="../assets/img/oc-pendente.png" alt="aprovar e reprovar">
+                      <div class="card-body">
+                        <p class="card-text">Permissão para os usuários da Matriz.</strong></p>
+                        </div>
+            </div>
+          </div>
+        </div> 
       </div>
 
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+            Consultar Histórico de Viagens
+          </button>
+        </h2>
+        <div id="flush-collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            Esta função permite pesquisar a quantidade de viagens, a existência de bloqueio por Perfil e os dados do Conjunto do Veículo (Motorista, Cavalo e Carretas). Serve como ferramenta de apoio para indentiticar o histórico de viagens e identificar o "Motorista de Primeira Viagem".<br><br>
+            A consulta poderá ser feita de duas formas:<br><br> o período em Meses na qual deseja pesquisar a quantidade de viagens.</li><br>
+            Será retornado:<br><br>
+            
+            <b>Motorista: </b>Nome, CPF, e Telefones;<br><br>
+            <ol>
+            <li>No Telefone será exibido um ÍCONE do WhatsApp e Telefone;</li>
+            <li>Ao clicar em qualquer um dos ÍCONES será direcionado para o WhatsApp ou para Ligação;</li>
+            <ol>
+              <li><b>Placa Carreta:</b> 1, 2, 3;</li>
+              <li><b>Quantidade de viagens: </b>de acordo com o período em meses informado;</li>
+              <li><b>Data: </b>última viagem realizada;</li>
+              <li><b>Bloqueio: </b>dados do bloqueio por Perfil;</li><br>
+            </ol>
+          </ol>
+        </ol>
+              <li>O Bloqueio por Perfil é realizado pela Equipe Alcance e Matriz Transvale dentro dos processos de Análise de Perfil Securitário. </li> <br>
+          
+              <strong>Observação: Os contatos do Motorista são retornados de acordo com o cadastro da Junção, sendo:</strong><br><br>
+              <li>CPF/CNPJ: informar CPF ou CNPJ; Será retornado os mesmos dados da consulta por CONJUNTO.<br><br>
+            </li>
+
+
+              <div class="card-group" style="width: 40rem;">
+                <div class="card">
+                  <img class="card-img-top" src="../assets/img/consultar-historico.gif" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Consulta</h5>
+                    <p class="card-text">Consulta por CPF/CNPJ ou Conjunto</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img class="card-img-top" src="../assets/img/historico.jpeg" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Histórico de Viagens</h5>
+                    <p class="card-text">Apresentação do histórico.</p>
+                  </div>
+                </div>
       
       
 
     
-    <!-- índice -->
-
-
-
-
-
-
-
-
-
-    <section class="inner-page">
-      <div class="container">
-         
-    <!-- Accordion -->
-    <section class="inner-page">
-      <div class="container">
-        <p>
-          <div class="list-group">
-            <div class="accordion" id="accordionExample">
-              <!-- Seção 1 -->
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    Consulta Rápida - Gerenciadora de Risco
-                  </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    A função de <strong>Consulta Rápida</strong> permite efetuar uma Consulta na Gerenciadora de Risco para saber se o Conjunto pesquisado possui LIBERAÇÃO securitária.<br><br>
-                    Os dados de entrada para essa Consulta são: <br><br>
-
-                    <li><strong>Placa do Veículo:</strong> informar a placa do veículo. Se localizado, o APP retornará o conjunto vinculado;</li><br>
-                    <li><strong>Informar Destino, Origem, Produto e Valor:</strong> será efetuado uma Consulta diretamente na base de dados da Gerenciadora de Risco. O retorno será de acordo com o Cadastro no momento da Consulta.<br><br></li>
-                    
-                    <div class="card" style="width: 18rem;">
-                      <img class="card-img-top" src="../assets/img/gif.gif" alt="GIF da consulta rápida">
-                      <div class="card-body">
-                        <p class="card-text"><em>Qualquer dúvida e/ou divergência no retorno da PESQUISA deverá entrar em contato com a <a href="https://valida.vertticegr.com.br/anonymous/login">Gerenciadora de Risco. </a></em></p>
-
-                      </div>
-                    </div> 
-
-                  </div>
-                </div>
-              </div>
-              
-              <!-- Adicione mais seções abaixo (Seção 2 até Seção 20) -->
-            
-              <!-- Seção 2 -->
-              
-              
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                    Comprovante de Documento
-                  </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    A Função de Comprovante de Documento permite aos Motoristas/Embarcadores/Administrativos/Operacionais enviarem os Comprovantes de Descarga obrigatórios de acordo com cada operação.<br><br>
-                    A função de Comprovante de Documento permite consultar o CT-e  de duas formas: <strong> Manual ou via Leitura do Código de Barras (CT-e ou CF-e)</strong>.<br><br>
-                    Os dados de entrada para pesquisa manual são:<br>
-                    <li>Número  do CT-e;</li>
-                    <li>Série do CT-e;</li>
-                    <li>CPF do Motorista</li><br>
-                    Para a leitura via Código de Barras, basta selecionar o Menu correspondente.<br><br>
-                    O sistema irá pesquisar o CT-e e retornará informando qual documento deverá ser anexado.<br> <br>
-                    Ao MODAL TANQUE, será solicitado informar a <strong> QUANTIDADE DE DESCARGA.</strong> Essa informação é obrigatória e deverá ser informada.<br><br>
-                    O Comprovante poderá ser fotografado no momento da pesquisa e ou buscar o arquivo direto da Galeria do Aparelho Celular.<br><br>
-                    Estas informações, depois de enviadas serão validadas pela Transvale Matriz para as emissões das faturas dos serviços realizados.<br><br>
-
-                    <div class="card" style="width: 18rem;">
-                      <img class="card-img-top" src="../assets/img/comprovante.png" alt="GIF da consulta rápida">
-                      <div class="card-body">
-                        <p class="card-text"><em>Consulta Manual. Para consulta com o código de barras, clique em <strong>"Ler Código de Barras"</strong>.</em></p>
-                        </div>
-                  </div>
-                </div>
-              </div>
-
-
-              <!---->
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Consulta Rápida - Gerenciadora de Risco
-                  </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    A função de <strong>Consulta Rápida</strong> permite efetuar uma Consulta na Gerenciadora de Risco para saber se o Conjunto pesquisado possui LIBERAÇÃO securitária.<br><br>
-                    
-                      </div>
-                    </div> 
-
-                  </div>
-                </div>
-              </div>
-
+    
 
 
   </main><!-- End #main -->

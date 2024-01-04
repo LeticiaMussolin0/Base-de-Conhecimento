@@ -1,8 +1,11 @@
 **Base de Conhecimento**
 Base de conhecimento, documentação, texto e instruções para uso do sistema Centro de Operações Compartilhadas (COC) e do Aplicativo Transvale.
 
+<<<<<<< HEAD
 <img src="https://uploads-ssl.webflow.com/5d76dc74247be142023bf92e/62e7c1463b02f944cb74c51e_Logo_Transvale.jpg">
 
+=======
+>>>>>>> b5e59e9932d547c903855345f289151f4e1fc432
 **Visão Geral**
 O projeto é um site de informações detalhadas sobre aplicativo e o sistema próprio da Transvale, além de servir como interface para um sistema interno desenvolvido pela empresa. Esta base de conhecimento é um recurso valioso para usuários internos e externos, oferecendo informações atualizadas e detalhadas sobre os aplicativos da empresa e seu ecossistema.
 
