@@ -95,59 +95,725 @@
     </section><!-- End Breadcrumbs -->
 
     <!-- índice -->
+ <!-- índice -->
+      
+ <section id="indice" class="about section-bg">
+  
+  <div class="section-title">
 
-    <section class="inner-page">
-      <div class="container">
-        <p>
-          <div class="list-group">
-            <div class="accordion" id="accordionExample">
-              <!-- Seção 1 -->
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    Accordion Item #1
-                  </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+    <h3><span>Instruções </span></h3>
+      <p>Selecione o tópico desejado para visualizar as informações.</p>
+  </div>
+
+<!-- índice -->
+
+<section class="inner-page">
+<div class="container">
+
+<div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
+        Gestão de Contratos/Ordem de Carregamento: Emissão de Ordem de Carregamento
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        Função que permite emitir Ordens de Carregamento baseado em um Contrato de Frete integrado na Plataforma Transvale.<br><br>
+        Após a seleção do Contrato/Sequencial, os dados necessários para emissão da Ordem de Carregamento são:<br><br>
+        1. Valor da Mercadoria;<br>
+        2. Quantidade;<br>
+        3. Peso;<br>
+        4. Observações;<br>
+        5. Placa do Veículo<br>
+        <li>A Placa do Veículo é consultada na Base do Maxicon para determinar os dados do Conjunto. Caso não exista Junção cadastrada será retornado mensagem de alerta;</li><br>
+        Antes de gerar a Ordem de Carregamento, é consultado e validado os dados cadastrais do Conjunto informado na Gerenciadora de Risco. Caso não exista será retornado mensagem de alerta;<br><br>
+        Será gerado o PDF da Ordem de Carregamento, que poderá ser enviado por e-mail ou WhatsApp.<br><br>
+        Antes de finalizar o Processo, o Sistema pergunta se deseja Gerar Ordem de Carregamento para Frete de Retorno. Se Sim, são listados todos os contratos que possuem como Destino a Origem do Contrato Selecionado. Os contratos que atendam ao critério de busca são listados em tela e o processo se repete para emissão da Ordem de Carregamento de Retorno.<br><br>
+        Nas opções dos botões de Ação existe mecanismo de Previsão de Tempo. Através do Controle de Frete selecionado, é apresentado  para a ORIGEM do Embarque, a previsão do tempo, considerando 5 dias: dia corrente e os próximos 4. <br><br>
+        <p style="color: rgb(255, 0, 0);">PONTO DE ATENÇÃO: TODAS AS ORDENS DE CARREGAMENTO EMITIDA SERÃO LISTADAS DENTRO DO FLUXO DE EMISSÃO DE CTe (Central de Manifesto Compartilhado).
+        TODAS as ORDENS DE CARREGAMENTOS EMITIDAS SÃO INTEGRADOS A BASE DO MAXICON.</p>
+    
+                <div class="card">
+                  <img class="card-img-top" src="../assets/img/frete1.png" alt="Frte Maxys">
+                  <div class="card-body">
+                    <p class="card-text"><em>Acesse em: > Gestão de Contratos > Ordem de Carregamento > Home.</em></p>
                   </div>
-                </div>
+
+                  <div class="card">
+                    <img class="card-img-top" src="../assets/img/frete2.png" alt="Frte Maxys">
+                    <div class="card-body">
+                      <p class="card-text"><em>Para visualizar os detalhes do contrato, clique sobre ele.</em></p>
+                    </div>
+
+                    <div class="card">
+                      <img class="card-img-top" src="../assets/img/frete3.png" alt="Frte Maxys">
+                      <div class="card-body">
+                        <p class="card-text"><em>Para editar, visualizar previsão do tempo, ou exluir contrato, clique no ícone ao lado do contrato</em></p>
+                      </div>
+                     </div>
+                     </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOneOne" aria-expanded="true" aria-controls="flush-collapseOneOne">
+      Gestão de Contratos/Ordem de Carregamento: Consultar Ordem de Carregamento
+      </button>
+    </h2>
+    <div id="flush-collapseOneOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body"> 
+Possibilita Consultar uma Ordem de Carregamento já emitida, seja no Aplicativo, na Plataforma ou no Maxicon (TAF27).<br><br>
+Os dados de entrada para Consultar a Ordem de Carregamento são:<br><br>
+1. Filial;<br>
+2. Número da Ordem de Carregamento;<br>
+Se OC localizado, o PDF com o documento da Ordem de Carregamento será carregado em tela com possibilidade de compartilhamento do PDF.
+
+<div class="card">
+  <img class="card-img-top" src="../assets/img/" alt="Frte Maxys">
+  <div class="card-body">
+    <p class="card-text"><em>SE NECESSARIO POR PDF AQUI</em></p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-img-top" src="../assets/img/" alt="Frte Maxys">
+        <div class="card-body">
+          <p class="card-text"><em>SE NECESSARIO POR PDF AQUI</em></p>
               </div>
-              
-              <!-- Adicione mais seções abaixo (Seção 2 até Seção 20) -->
-            
-              <!-- Seção 2 -->
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Accordion Item #2
-                  </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                  </div>
-                </div>
-              </div>
-            
-              <!-- Repita o código acima para criar Seções 3 até 20 -->
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseThree">
-                    Accordion Item #2
-                  </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                  </div>
-                </div>
-              </div>
-            
             </div>
-            
+            </div>
+            </div>
+            </div>
+
+
+<div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="true" aria-controls="flush-collapseTwo">
+        Gestão de Contratos/Ordem de Carregamento: Ordem de Carregamento Pendente
+      </button>
+    </h2>
+
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        Função que permite <strong>APROVAR</strong> ou <strong>REPROVAR</strong> Ordens de Carregamento que possuam restrição e ou bloqueios de acordo com Regras de Negócios específicas.<br><br>
+        Os bloqueios programados são:<br><br>
+        Documentos e Eventos com vínculo de "Funcionário" ou "Veículo" e "Ordem de Serviço" aberta.<br><br>
+        Funcionalidade aplicável apenas a Frota Transvale e usada pela equipe da Mesa Logística.<br><br>
+
+         <div class="card">
+          <img class="card-img-top" src="../assets/img/" alt="Frte Maxys">
+          <div class="card-body">
+            <p class="card-text"><em>SE NECESSARIO POR PDF AQUI</em></p>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
+ 
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="true" aria-controls="flush-collapseThree">
+            Gestão de Contratos/Pagamento Carta Frete
+          </button>
+        </h2>
+        <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            Função que permite o Pagamento das Cartas Fretes Transvale (Adiantamento e ou Saldo).<br><br>
+
+            Os dados de entrada são:<br><br>
+           1. Código de Barras CFe/CTe: Pesquisa da Carta Frete ou DACTe através do código de barras via leitor de documentos;<br>
+           2. Parcela: 1-Adiantamento ou 2-Saldo;<br>
+           <ol>Quando Parcela não informada, o sistema buscará a parcela que consta aberta;</ol>
+           3. CT-e: Número do CT-e;<br>
+           4. Série: Série do CT-e;<br>
+           5. CPF: CPF do Motorista;<br><br>
+            Quando o Campo <strong>Código de Barras</strong> é informado os outros campos são dispensáveis;<br>
+            Se o Código de Barras não for informado, os campos <strong>Parcela, CT-e, Série</strong> e <strong>CPF</strong> são obrigatórios.<br>
+            O CTe localizado é listado no GRID (FIGURA 1)<br><br>
+
+            <div class="card">
+              <img class="card-img-top" src="../assets/img/frete5.png" alt="Frete Maxys">
+              <div class="card-body">
+            </div>
+              </div> 
+
+            <br>Se Saldo, o Peso Destino deverá ser informado.<br>
+            <li>Informar o Peso Destino conforme Ticket de Balança apresentada;</li>
+            <li>As atuais regras já existentes para o Pagamento de Saldo permanecem inalteradas;</li>
+            <li>Se Peso Destino MAIOR que Peso Carregamento, o valor do Peso deverá ser repetido.</li>
+              <ol>A Plataforma não permite Peso Destino Superior que Peso Destino;</ol>
+            <li>Após informar o Peso de Destino, o botão <b>Recalcular</b> deverá ser acionado para recalcular o valor do <b>Saldo</b>;</li>
+              <ol>Nesse momento todas as regras parametrizadas no Sistema (Contrato, Clifor etc) serão aplicadas;</ol>
+            <li>O Valor a Pagar será exibido bem como os descontos (Cadastro Gerenciadora de Risco, por exemplo);</li>
+            <li>Se precisar, os Adicionais de Frete poderão ser usados para compor o Pagamento;</li>
+              <ol>Os Adicionais de Frete são os mesmos já usados e com as mesmas regras de aplicação;</ol>
+            <li>Informar o Comprovante de Descarga, <b>OBRIGATÓRIO</b> para o processo;</li>
+              <ol>Sem o Comprovante anexado, o Pagamento não é realizado;</ol>
+
+              <div class="card">
+                <img class="card-img-top" src="../assets/img/" alt="Frte Maxys">
+                <div class="card-body">
+                  <p class="card-text"><em>Tela de Acerto de Saldo: Peso, Adicional de Frete e Comprovante de Descarga</em></p>
+                </div>
+              </div>
+              <br><br>
+
+              Após finalizado, pressionar o botão "Adicionar Pagamento". A partir desse momento, o pagamento é inserido na lista de pagamento, ficando marcado na cor verde.<br><br>
+              O Sistema permite o pagamento de múltiplos pagamentos, para isso basta repetir os mesmos passos citados acima para inserir um novo.
+
+              <div class="card">
+                <img class="card-img-top" src="../assets/img/" alt="Frte Maxys">
+                <div class="card-body">
+                  <p class="card-text"><em>Grid de Pagamento de Carta Frete</em></p>
+                </div>
+              </div>
+              <br><br>
+
+              Para Finalizar o Pagamento, o botão "Finalizar Pagamento" deverá ser acionado.<br><br>
+              Nesse momento o sistema irá solicitar os dados do cheque (Número e Série).<br><br>
+              O sistema separa os cheques quando o valor a pagar for <b>MAIOR</b> que <b>R$3.000,00</b>.<br><br>
+              Finalizado o processo de pagamento, todos os dados inseridos serão integrados no Maxicon com a geração e execução do Processo de Caixa.<br><br>
+
+              <div class="card">
+                <img class="card-img-top" src="../assets/img/" alt="Frte Maxys">
+                <div class="card-body">
+                  <p class="card-text"><em>Informar Cheque: Número e Série</em></p>
+         </div>
+        </div>
+      </div>
+     </div>
+    </div>
+
+<div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="true" aria-controls="flush-collapseFour">
+        Gestão de Contratos/Pagamento Carta Frete: Relatório Pagamento de CT-e
+      </button>
+    </h2>
+    <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+Função que permite a emissão de Relatórios de Pagamento de Carta Frete mediante seleção de filtros pre selecionados.<br><br>
+Os dados de entrada são:<br><br>
+1. Data (DE | ATÉ);<br>
+2. Parcela: 1-Adiantamento ou 2 - Saldo;<br>
+3. Filial;<br>
+4. Código de Barras CFe/CTe;<br>
+5. CTe;<br>
+6. Série;<br><br>
+De acordo com os filtros o relatório é exibido, listando todos os pagamentos realizados.<br><br>
+O relatório pode ser exportado para o Excel.<br><br>
+
+<div class="card">
+  <img class="card-img-top" src="../assets/img/" alt="Frte Maxys">
+  <div class="card-body">
+    <p class="card-text"><em>Relatório Pagamento CT-e</em></p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+
+ <div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="true" aria-controls="flush-collapseFive">
+        Gestão de Contratos/Frete: Cadastro de Frete
+      </button>
+    </h2>
+    <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+Funcionalidade que permite o <b>Cadastro de Frete</b> (Contratos) que serão carregados e exibidos no <b>Aplicativo Transvale</b>.<br>
+Os Fretes cadastrados serão passíveis de consulta diretamente por <b>Usuários Externos</b> (Motoristas Terceiros).<br><br>
+<b>O Cadastro de Frete possui as seguintes regras:</b><br><br>
+<b>1. Cadastrar Frete</b>: Permite a inserção de um novo Frete;<br>
+<b>2. Exportar para Excel</b>: lista todos os Fretes cadastrados no formato Excel;<br>
+<b>3. Exportar para PDF</b>: lista todos os Fretes cadastrados no formato PDF;<br>
+4. O Cadastro de Frete possui validade de <b>48h</b>. Passado esse período ele é excluído automaticamente do sistema;<br>
+5. É possível editar o Cadastro de Frete, clicando sobre o registro desejado. O campo passível de edição é o valor do Frete;<br>
+6. Ao editar o Frete, o sistema aplica mais <b>48h</b> de validade considerando a data e hora da edição;<br>
+É possível também, se desejado, a exclusão do Cadastro de Frete através de botão de ação "Apagar".<br><br>
+<b>O Cadastro de Frete possui os seguintes campos:</b><br><br>
+1. <b>Origem</b>: Cidade de Origem;<br>
+2. <b>Destino</b>: Cidade de Destino;<br>
+3. <b>Distância</b>: Distância em KM entre Origem x Destino;<br>
+<ol>O cálculo da distância é realizado através do Google Maps;</ol>
+4. Produto</b>: Lista de Produtos (Natureza de Carga), conforme cadastros já existentes no Maxicon;<br>
+5. <b>Espécie</b>: Espécie do Produto, conforme cadastros já existentes no Maxicon;<br>
+6. <b>Frete Motorista R$</b>: Valor do Frete Motorista conforme Contrato;<br>
+7. <b>Valor a Combinar</b>: usado quando o Frete Motorista é negociável;<br>
+8. <b>Empresa Contrato</b>: Filial detentora/responsável pelo Contrato de Frete;<br>
+9. <b>Observação</b>: campo de uso livre para informar dados adicionais e relevantes ao Contrato de Frete;<br><br>
+O Frete Cadastro é listado no GRID e disponível para consulta no APP.<br>
+
+<div class="card">
+  <img class="card-img-top" src="../assets/img/" alt="">
+  <div class="card-body">
+    <p class="card-text"><em>Cadastro de Frete</em></p>
+</div>
+</div>
+
+<div class="card">
+  <img class="card-img-top" src="../assets/img/" alt="">
+  <div class="card-body">
+    <p class="card-text"><em>Cadastro de Frete: Edição</em></p>
+  
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+
+<div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="true" aria-controls="flush-collapseSix">
+        Gestão de Contratos/Frete: Solicitações de Frete
+      </button>
+    </h2>
+    <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+Função que permite a interação entre Motorista Terceiro x Filial para o atendimento de uma solicitação de Frete.<br><br>
+A partir da pesquisa realizada pelo Motorista Terceiro via APP, as seguintes ações serão disparadas:<br><br>
+<b>1. Quero Frete:</b><br><br>
+<li>O APP permite ligação direta para a Filial do Contrato via Dial ou WhatsApp;</li>
+<li>Nesse momento é realizado o atendimento e negociação;</li><br>
+<b>2. Solicitar Atendimento:<br><br></b>
+<li>Será gerado um registro nessa tela para o retorno via ligação ao Motorista para atendimento e negociação;</li>
+    <ol>1. Nesse momento poderá ser emitido a Ordem de Carregamento ou;</ol>
+    <ol>2. Informar o motivo da recusa do Frete;</ol>
+O sistema controla o tempo de vida do registro e o tempo de atendimento;<br>
+O atendimento poderá ser realizado via WhatsApp diretamente na Plataforma.<br><br>
+<p style="color: red;">PONTO DE ATENÇÃO IMPORTANTE: O CADASTRO DO MOTORISTA DEVE ESTAR CORRETO, POIS O TELEFONE CONSIDERADO SERÁ O INFORMADO DENTRO DO PROCESSO DE CADASTRO DE MOTORISTA</p><b></b>
+<b>3. Para o atendimento, basta selecionar as opções disponíveis no Botão de Ação que são:</b><br><br>
+<li>Adicionar Ordem de Carregamento: Habilita o formulário de emissão de Ordem de Carregamento;</li>
+<ol>1. O Contrato deverá ser informado;</ol>
+<ol>2. A Variante deverá ser selecionada;</ol>
+<ol>3. Preencher os campos do formulário e gerar a Ordem de Carregamento;</ol>
+<b>Finalizar:</b> finaliza o Atendimento. Usado quando a negociação não é concluída;<br>
+<ol>1. Informar o motivo e preencher uma observação (opcional);</ol>
+<ol>2. Motivo de Recusa mediante Cadastro;</ol>
+<b>Contatar via WhatsApp</b>: será aberto o WhatsApp Web chamando o telefone do Motorista;<br>
+<b>Excluir</b>: Excluir o registro de atendimento;<br>
+<ol>1. Baseado em Perfil de Acesso.</ol>
+
+<div class="card">
+  <img class="card-img-top" src="../assets/img/" alt="">
+  <div class="card-body">
+    <p class="card-text"><em>Grid de Solicitação de Frete</em></p>
+  </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img-top" src="../assets/img/" alt="">
+          <div class="card-body">
+            <p class="card-text"><em>Grid Solicitação de Frete: WhatsApp - Lista de Telefones</em></p>
+          </div>
+                </div>
+
+                <div class="card">
+                  <img class="card-img-top" src="../assets/img/" alt="">
+                  <div class="card-body">
+                    <p class="card-text"><em>Grid: Solicitação de Frete - Recusa</em></p>
+                  </div>
+                        </div>
+
+                        <div class="card">
+                          <img class="card-img-top" src="../assets/img/" alt="">
+                          <div class="card-body">
+                            <p class="card-text"><em>Grid: Solicitação de Frete - Recusa</em></p>
+                          </div>
+                                </div>
+
+                                <div class="card">
+                                  <img class="card-img-top" src="../assets/img/" alt="">
+                                  <div class="card-body">
+                                    <p class="card-text"><em>Grid: Solicitação de Frete - Emissão da Ordem de Carregamento - Informar Contrato</em></p>
+                                  </div>
+                                        </div>
+
+                                        <div class="card">
+                                          <img class="card-img-top" src="../assets/img/" alt="">
+                                          <div class="card-body">
+                                            <p class="card-text"><em>Grid: Solicitação de Frete - Emissão da Ordem de Carregamento</em></p>
+                                          </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+<div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="true" aria-controls="flush-collapseSeven">
+        Gestão de Contratos/Frete: Controle de Solicitação de Frete - Relatório Gerencial 
+       </button>
+    </h2>
+        <div id="flush-collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">   
+
+Relatório Gerencial para acompanhamento em tempo real de todos as solicitações e atendimentos em curso.<br><br>
+Relatório condicionado a aplicação de Filtros pre selecionados a saber:<br><br>
+1. <b>Empresa</b>: Lista de Empresas;<br>
+2. <b>Produto</b>: Produto (Natureza de Carga);<br>
+3. <b>Espécie</b>: Espécie da Natureza de Carga;<br>
+4. <b>Usuário</b>: Lista de Usuário;<br>
+5. <b>Data Inicial e Data Final</b>;<br>
+6. <b>Placa</b>;<br>
+7. <b>Motorista</b>;<br>
+8. <b>Status</b>: Finalizado/Pendente;<br><br>
+Possibilidade de extrair o relatório no formato Excel.<br><br>  
+
+<div class="card">
+  <img class="card-img-top" src="../assets/img/" alt="">
+  <div class="card-body">
+    <p class="card-text"><em>Contrato de Frete: Relatório Gerencial das Solicitações</em></p>
+  </div>
+        </div>
+      </div>
+    </div>
+  </div>
+        
+  <div class="accordion accordion-flush" id="accordionFlushExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="true" aria-controls="flush-collapseEight">
+          Gestão de Contratos/Central de Manifesto Compartilhado/Emissão 
+         </button>
+      </h2>
+          <div id="flush-collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">   
+  
+  Função que permite a emissão de CTe diretamente pela Plataforma Transvale.<br><br>
+  A emissão de CTe contempla todas as operações/emissões já existentes, exceto <b>SÉRIE X.</b><br><br>
+  <p style="color: red;">Quando SUBCONTRATAÇÃO ou OPERAÇÃO MULTIMODAL, O CTe de Origem deverá ser informado para permitir a emissão do CTe Transvale.</p><b></b>
+  <b>O Formulário de Emissão de CTe possui os seguintes filtros:</b><br><br>
+  1. <b>Data Inicial e Data Final</b>: Lista de Empresas;<br>
+  2. <b>Contrato</b>: Produto (Natureza de Carga);<br>
+  3. <b>OC</b>: Espécie da Natureza de Carga;<br>
+  4. <b>CT-e</b>: Lista de Usuário;<br>
+  5. <b>Placa</b>;<br>
+  <ol>Será listado as Ordens de Carregamento de acordo com a Placa;</ol>
+  6. <b>Filial</b>: Lista de Filial;<br>
+  7. <b>Negócio</b>: Tipo de Negócio Frota/Agenciamento;<br>
+  8. <b>Status</b>: Aguardando Emissão, CTe Cancelado, Emissão Finalizada, Erro na Emissão, Na Fila de Emissão, Processando Emissão;<br>
+  9. <b>Usuário OC</b>:  lista de usuários emissores das Ordens de Carregamento;<br>
+  10. <b>Usuário CT-e</b>: lista de usuários emissores do CT-e.<br><br> 
+  
+  <b>O Processo de Emissão de CTe possui as seguintes regras:</b><br><br>
+
+  1. Necessário emissão de <b>Ordem de Carregamento</b>;
+  <li>Todas as informações necessárias para a emissão do CTe é contida na Ordem de Carregamento;</li><br>
+
+  2. Vínculo entre <b>Ordem de Carregamento x NFe</b>;
+<li>Informar a NFe de emissão preenchendo os campos do formulário com os dados da NF-e;</li>
+<li>Possível informar a chave de acesso: se NFe integrada na Base do Maxicon, os campos são preenchidos automaticamente;</li>
+<li>Possível carregar o XML da NFe: os campos são preenchidos automaticamente;<br><br></li>
+
+  3. Informar o Valor de Mercadoria de Seguro<br>
+  <li>Sistema permite alterar o Valor de Mercadoria de Seguro SEMPRE para CIMA, NUNCA para BAIXO;</li><br>
+
+  A Ordem de Carregamento emitida é baseada em <b>Contrato x Variante</b>. De acordo com o Tipo de Negócio (<b>Frota ou Agenciamento</b>) o processo de emissão terão regras distintas.<br><br>
+  
+  <b><p style="color: red;">Tipo de Negócio FROTA</p></b>
+  1. Emitir a Ordem de Carregamento;<br>
+  2. Selecionar a Ordem de Carregamento emitida;<br>
+  3. Vincular a NF-e;<br>
+  4. Informar o Valor de Mercadoria de Seguro;<br>
+  5. Emitir CTe;<br>
+  <ol> Confirmar a emissão da MDFe (Opcional);</ol>
+  6. Após emissão, DACT-e, Carta Frete e MDF-e serão emitidos;<br>
+  7. Geração dos documentos no formato PDF podendo ser compartilhados via WhatsApp ou E-mail;<br>
+  8. Quando Tipo de Negócio Tipo Frota, o Motorista informado na Ordem de Carregamento terá disponibilizado no APP os documentos emitidos para Download; <br> <br>
+
+  <b><p style="color: red;">Tipo de Negócio AGENCIAMENTO</p></b>
+  1. Emitir a Ordem de Carregamento;<br>
+  2. Selecionar a Ordem de Carregamento emitida;<br>
+  3. Vincular a NF-e;  <br>
+  4. Informar o Valor de Mercadoria de Seguro ;  <br>
+  5. Confirmar valor do Frete Motorista;  <br>
+  <ol>
+    <li>Frete Motorista carregado conforme parametrização do Contrato vinculado a Ordem de Carregamento;</li> 
+  <li>Se Valor do Frete Alterado, o valor do adiantamento é carregado;</li>  
+  </ol>
+  <li>Valor do Adiantamento calculado conforme parametrização do percentual definido em contrato;</li>
+  <li>O Valor do Adiantamento pode ser alterado para BAIXO, NUNCA acima do limite calculado;  </li><br>
+
+  6. Informar os Adicionais de Frete e Valor (Opcional);<br>
+  7. Informar a Data de Entrega  ;<br>
+  8. Informar o Prazo de Entrega (HORAS); <br>
+  9. Informar o Prazo Descarga (HORAS);<br> 
+  10. Observações CTe (Opcional);<br> 
+  11. Selecionar o Tipo de Pagamento da Carta Frete;<br>
+  <ol>
+    <li>Se não informado será considerado o Pagamento padrão via Cheque;</li>
+    <li>Lista de Carta Frete já usadas no Maxicon:</li>
+  </ol>
+  <ol>
+    <li>CCOVMAIS;</li>
+    <li>CIOTPAG;</li>
+    <li>PAMCARY;</li>
+  </ol>
+1. Quando Pamcary obrigatório informar Operação, Favorecido e Meio de Pagamento;<br>
+<ol><li>Favorecido;</li></ol>
+<ol><li>Contratado;</li>
+<li>Motorista;</li></ol>
+
+2. Meio de Pagamento;<br>
+  <ol><li>Conta Corrente;</li>
+  <li>Cartão: será considerado o Cartão do Motorista informado no Cadastro de Motorista; </li></ol>
+3. Espécie: indica que o Valor do Pedágio calculado será pago/liberado no Saldo da Carta Frete;<br>
+4. SOLLUS;<br>
+5. SP RISK;<br>
+6. TARGET;<br>
+
+12. Informar o Operador do Pagamento do Pedágio;<br>
+<ol>
+  <li>Seleção do Pedágio condicionado ao Tipo de Carta Frete;  </li>
+  <li>O Sistema já está parametrizado de acordo com as regras entre CFe x VPe;  </li>
+</ol>
+
+<b><p style="color: red;">STATUS Emissão CTe</p></b>
+1. <b>Aguardando Emissão</b>;<br>
+<ol>
+<li>Ordem de Carregamento na lista de Emissão;</li>
+</ol>
+2. <b>CT-e Cancelado</b>;<br>
+<ol>
+  <li>CT-e Cancelado;  </li>
+  </ol>
+3. <b>Emissão Finalizada</b>;<br>
+<ol>
+  <li> Emissão realizada com Sucesso;  </li>
+  </ol>
+4. <b>Erro na Emissão</b>;<br>
+<ol>
+  <li>Erro na Emissão;  </li>
+  <li>Validação conforme regras parametrizadas;  </li>
+  </ol>
+5. <b>Na Fila de Emissão</b>;<br>
+<ol>
+  <li>Ordem de Carregamento na Fila de Emissão de CTe;  </li>
+  </ol>
+6. <b>Processando Emissão</b>;<br>
+<ol>
+  <li>Ordem de Carregamento da Fila de Processamento de CTe;  </li>
+  </ol>
+
+  <b><p style="color: red;">Sequenciamento  </p></b>
+  Aguardando Emissão --> Na Fila de Emissão --> Processando Emissão. Os resultados poderão ser:
+  <li>Emissão Finalizada ou;</li>
+  <li>Erro na Emissão
+    <li>
+      Retornado o Motivo do erro;
+    </li>
+  </li>
+
+  Passo a Passo Emissão de CTe<br><br>
+
+  <b><p style="color: red;">Tipo de Negócio FROTA  </p></b>
+  Passo 1: Selecionar a Ordem de Carregamento;<br><br>
+  <li>Clicar no Botão de Ação e clicar em Emitir CTe;  </li><br>
+
+  <div class="card">
+    <img class="card-img-top" src="../assets/img/" alt="">
+    <div class="card-body">
+      <p class="card-text"><em>CMC - Seleção de Ordem de Carregamento      </em></p>
+      </div>
+    </div>
+           <br>
+
+<b>Passo 2: Aba Dados Gerais</b>
+<li>Informação do Número Ordem de Carregamento;   </li>  
+<li>CPF do Usuário Emissor do CT-e; </li>         
+<li>Filial: Filial da Ordem de Carregamento x Contrato; </li>        
+<li>Tipo de Serviço: Indicador do tipo de operação de Frete conforme parametrização do Contrato;     </li>    
+<li>Indicador de Negociação do CTe MultiModal: indica se o Contrato é MultiModal conforme parametrização do Contrato;  </li>       
+<li>Chave de Acesso CTe MultiModal: Preenchido após emissão do CTe de uma operação MultiModal;</li><br>
+
+          <div class="card">
+            <img class="card-img-top" src="../assets/img/" alt="">
+            <div class="card-body">
+              <p class="card-text"><em>Contrato de Frete: Relatório Gerencial das Solicitações</em></p>
+            </div>
+            </div>
+            <b>Passo 3: Informar NFe</b>
+            <li>Chave de Acesso: informar Chave de Acesso. Se NFe integrada na Base Maxicon, todos os campos são preenchidos automaticamente;</li><br><br>
+            <li>XML Nota: carregar o arquivo XML da NFe. Após carregamento, todos os campos são preenchidos automaticamente;</li><br><br>
+            <li>Caso Chave de Acesso e XML da Nota não informado, os campos do formulário deverão ser preenchidos conforme dados da NFe;</li><br><br>
+            + Adicionar NF: se necessário informar mais uma NFe para a emissão do CTe, basta clicar no respectivo botão e repetir os passos para a outra NFe;<br><br>
+            ABA Documentos: Será habilitado para informar o CTe de Origem quando Emissão for para um Tipo de Operação SubContratação ou MultiModal;<br><br>
+            Ao Final Pressionar botão Emitir CT-e;<br><br>
+            Informar o Valor de Mercadoria e acompanhar a emissão do CT-e; <br><br>
+            Informar se Deseja emitir MDF-e;<br><br>
+
+            <div class="card">
+              <img class="card-img-top" src="../assets/img/" alt="">
+              <div class="card-body">
+                <p class="card-text"><em>Contrato de Frete: Relatório Gerencial das Solicitações</em></p>
+              </div>
+              </div>
+
+Quando CTe possuir Status <b><p style="color: red;">"Emissão Finalizada" </p></b> no botão de Ação será habilitado opção para impressão dos Documentos de Transporte emitido. Os documentos serão disponibilizados conforme parametrização do Contrato;<br><br>
+<li>DACT-e;</li><br>
+<li>MDF-e;</li><br>
+<li>Carta Frete;</li><br><br>
+
+
+Se a emissão apresentar <b><p style="color: red;">"Erro na Emissão" </p></b> ao clicar na linha do Grid da Ordem de Carregamento, os sistema abrirá os detalhes com a descrição retornada pelo Maxicon.
+              <div class="card">
+                <img class="card-img-top" src="../assets/img/" alt="">
+                <div class="card-body">
+                  <p class="card-text"><em>Contrato de Frete: Relatório Gerencial das Solicitações</em></p>
+                </div>
+                </div>
+
+                <div class="card">
+                  <img class="card-img-top" src="../assets/img/" alt="">
+                  <div class="card-body">
+                    <p class="card-text"><em>Contrato de Frete: Relatório Gerencial das Solicitações</em></p>
+                  </div>
+                  </div>
+                  <div class="card">
+                    <img class="card-img-top" src="../assets/img/" alt="">
+                    <div class="card-body">
+                      <p class="card-text"><em>Contrato de Frete: Relatório Gerencial das Solicitações</em></p>
+                    </div>
+                  </div>
+                    <div class="card">
+                      <img class="card-img-top" src="../assets/img/" alt="">
+                      <div class="card-body">
+                        <p class="card-text"><em>Contrato de Frete: Relatório Gerencial das Solicitações</em></p>
+                      </div>
+                    </div>
+
+<b>Passo a Passo Emissão de CTe</b>
+<b><p style="color: red;">"Tipo de Negócio AGENCIAMENTO</p></b>
+
+Passo 1: Selecionar a Ordem de Carregamento;<br><br>
+<li>Clicar no Botão de Ação e clicar em Emitir CTe;</li>
+
+<div class="card">
+  <img class="card-img-top" src="../assets/img/" alt="">
+  <div class="card-body">
+    <p class="card-text"><em>Contrato de Frete: Relatório Gerencial das Solicitações</em></p>
+  </div>
+</div>
+
+Passo 2: Informar NFe<br><br>
+<li>Chave de Acesso: informar Chave de Acesso. Se NFe integrada na Base Maxicon, todos os campos são preenchidos automaticamente;</li>
+<li>XML Nota: carregar o arquivo XML da NFe. Após carregamento, todos os campos são preenchidos automaticamente;</li>
+<li>Caso Chave de Acesso e XML da Nota não informado, os campos do formulário deverão ser preenchidos conforme dados da NFe;</li><br><br>
+
++ Adicionar NF: se necessário informar mais uma NFe para a emissão do CTe, basta clicar no respectivo botão e repetir os passos para a outra NFe;<br><br>
+Informar <b>VALOR DE MERCADORIA SEGURO:</b><br><br>
+Passo 2 - Documento: Será habilitado para informar o CTe de Origem quando Emissão for para um Tipo de Operação SubContratação ou MultiModal;<br><br>
+
+<div class="card">
+  <img class="card-img-top" src="../assets/img/" alt="">
+  <div class="card-body">
+    <p class="card-text"><em>Contrato de Frete: Relatório Gerencial das Solicitações</em></p>
+  </div>
+</div>
+
+<b>Passo 3: Ajustar/Confirmar valores de Frete e Adiantamento</b><br><br>
+<li>Valor do Frete já vem preenchido conforme parametrização do Contrato;</li>
+  <li>O valor do Frete poderá ser alterado SEMPRE para BAIXO.</li>
+    <li>O Valor do Adiantamento é calculado levando em consideração o valor do frete x Peso ou Volume da NFe vinculada. O cálculo do adiantamento leva em consideração o valor % parametrizado em Contrato;</ul>
+      <li>O Valor do Adiantamento poderá ser alterado SEMPRE para BAIXO, podendo ser R$0,00;</li>
+        <li>Adicionais de Frete: Opcional de acordo com a negociação;</li>
+          <li>Data de Entrega: informar a data prevista para entrega no formato DD/MM/AAAA</li>
+            <li>Prazo Entrega (HORAS): informar o prazo de entrega no formato HH:MM;</li>
+              <li>Prazo Descarga (HORAS): informar o prazo de descarga no formato HH:MM;</li>
+                <li>Observações CTe: campo de uso livre para qualquer informação adicional no CTe (Opcional)</li>
+
+                <div class="card">
+                  <img class="card-img-top" src="../assets/img/" alt="">
+                  <div class="card-body">
+                    <p class="card-text"><em>Contrato de Frete: Relatório Gerencial das Solicitações</em></p>
+                  </div>
+                </div>
+
+<b>Passo 4: Informar o tipo de Pagamento do Frete (Carta Frete);</b><br><br>
+<li>Selecionar conforme operação em curso;</li>
+<li>Se nada selecionado, o pagamento do frete será no Cheque;</li>
+<li>Se Selecionado Operador CFe "Pamcary", os campos "Operação", "Favorecido" e "Meio de Pagamento" são obrigatórios;</li>
+<ul>
+  <li><b>Operação</b>: Selecionar conforme a característica do Veículo vinculado na Ordem de Carregamento;</li>
+  <li><b>Favorecido</b>: Contratado ou Motorista;</li>
+  <ul>
+    <li>Dados serão considerados de acordo com o cadastro de Motorista/Junção;    </li>
+  </ul>
+  <li><b>Meio de Pagamento</b>:
+    <li><b>Conta Corrente</b>: NÃO USADO;    </li>
+    <li><b>Cartão</b>: Pagamento via Cartão;    </li>
+    <li><b>Espécie</b>: indicativo que o Pedágio será pago no Cartão e o valor será liberado no Saldo do Pagamento da Carta Frete;    </li>
+
+    <div class="card">
+      <img class="card-img-top" src="../assets/img/" alt="">
+      <div class="card-body">
+        <p class="card-text"><em>Contrato de Frete: Relatório Gerencial das Solicitações</em></p>
+      </div>
+    </div>
+
+    <b>Passo 5: Informar o Tipo de Pagamento Pedágio.</b>
+    <li>Se Pagamento do Frete via Carta Frete Padrão (Cheque), nenhum operador VPe deverá ser informado;</li>
+    <li>Se no Passo 4 CFe for informado o Operador Pamcary, o Passo 5 já estará vinculado não cabendo nenhuma ação do usuário.</li>
+
+  <div class="card">
+    <img class="card-img-top" src="../assets/img/" alt="">
+    <div class="card-body">
+      <p class="card-text"><em>Contrato de Frete: Relatório Gerencial das Solicitações</em></p>
+    </div>
+  </div>
+
+<b>Ao Final Pressionar botão Emitir CT-e;</b><br><br>
+Informar se Deseja emitir MDF-e;<br><br>
+Acompanhar a emissão do CTe;<br><br>
+
+Quando CTe possuir Status "Emissão Finalizada", no botão de Ação será habilitado opção para impressão dos Documentos de Transporte emitido. Os documentos serão disponibilizados conforme parametrização do Contrato;<br><br>
+<li>DACT-e;</li>
+<li>MDF-e;</li>
+<li>Carta Frete;</li>
+<li>CIOT;</li>
+
+<div class="card">
+  <img class="card-img-top" src="../assets/img/" alt="">
+  <div class="card-body">
+    <p class="card-text"><em>Contrato de Frete: Relatório Gerencial das Solicitações</em></p>
+  </div>
+</div>
+
+<div class="card">
+  <img class="card-img-top" src="../assets/img/" alt="">
+  <div class="card-body">
+    <p class="card-text"><em>Contrato de Frete: Relatório Gerencial das Solicitações</em></p>
+  </div>
+</div>
+
+<div class="card">
+  <img class="card-img-top" src="../assets/img/" alt="">
+  <div class="card-body">
+    <p class="card-text"><em>Contrato de Frete: Relatório Gerencial das Solicitações</em></p>
+  </div>
+</div>
+
+
+        </div>
+      </div>
+    </div>
+
+
+  
+
+                
 
     <!-- Accordion -->
 
