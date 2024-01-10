@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Base de Conhecimento</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  <section id="topbar" class="d-flex align-items-center">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope d-flex align-items-center"><a href="equipe.ti@transvale.com.br">equipe.ti@transvale.com.br</a></i>
+        <i class="bi bi-phone d-flex align-items-center ms-4"><span>(45) 3229-8787</span></i>
+      </div>
+      <div class="social-links d-none d-md-flex align-items-center">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+            <!--Uncomment below if you prefer to use an image logo -->
+            <a href="index.html" class="logo"><img src="assets/img/logo.jpg" alt=""></a>
+
+            <nav id="navbar" class="navbar">
+              <ul>
+                <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
+                <li><a class="nav-link scrollto" href="index.html" hreflang="#about">Sobre</a></li>
+                <li><a class="nav-link scrollto" href="#services">Instruções</a></li>
+                <li class="dropdown"><a href="#"><span>Conhecimento</span> <i class="bi bi-chevron-down"></i></a>
+                  <ul>
+                    <li><a href="inner-page.html">Aplicativo Transvale
+                    <li><a href="#">Plataforma Transvale</a></li>
+                  </ul>
+                </li>
+                <li><a class="nav-link scrollto" href="#contact">Contato</a></li>
+              </ul>
+              <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+      
+          </div>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main" data-aos="fade-up">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Plataforma Transvale</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Plataforma Transvale</li>
+          </ol>
+        </div>
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+<!-- índice -->
+      
+<section id="indice" class="about section-bg">
+  <div class="section-title">
+
+    <h3><span>Instruções </span></h3>
+      <p>Selecione o tópico desejado para visualizar as informações.</p>
+  </div>
+
+<!-- índice -->
+<section class="inner-page">
+<div class="container">
+
+
+    <!-- Accordion -->
+
+    <!-- 1. Gestão de Contratos/Ordem de Carregamento: Emissão de Ordem de Carregamento -->
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                Gestão de Contratos/Ordem de Carregamento: Emissão de Ordem de Carregamento
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                Função que permite emitir Ordens de Carregamento baseado em um Contrato de Frete integrado na Plataforma Transvale.<br><br>
+                Após a seleção do Contrato/Sequencial, os dados necessários para emissão da Ordem de Carregamento são:<br><br>
+                1. Valor da Mercadoria;<br>
+                2. Quantidade;<br>
+                3. Peso;<br>
+                4. Observações;<br>
+                5. Placa do Veículo<br>
+                <li>A Placa do Veículo é consultada na Base do Maxicon para determinar os dados do Conjunto. Caso não exista Junção cadastrada será retornado mensagem de alerta;</li><br>
+                Antes de gerar a Ordem de Carregamento, é consultado e validado os dados cadastrais do Conjunto informado na Gerenciadora de Risco. Caso não exista será retornado mensagem de alerta;<br><br>
+                Será gerado o PDF da Ordem de Carregamento, que poderá ser enviado por e-mail ou WhatsApp.<br><br>
+                Antes de finalizar o Processo, o Sistema pergunta se deseja Gerar Ordem de Carregamento para Frete de Retorno. Se Sim, são listados todos os contratos que possuem como Destino a Origem do Contrato Selecionado. Os contratos que atendam ao critério de busca são listados em tela e o processo se repete para emissão da Ordem de Carregamento de Retorno.<br><br>
+                Nas opções dos botões de Ação existe mecanismo de Previsão de Tempo. Através do Controle de Frete selecionado, é apresentado  para a ORIGEM do Embarque, a previsão do tempo, considerando 5 dias: dia corrente e os próximos 4. <br><br>
+                <p style="color: rgb(255, 0, 0);">PONTO DE ATENÇÃO: TODAS AS ORDENS DE CARREGAMENTO EMITIDA SERÃO LISTADAS DENTRO DO FLUXO DE EMISSÃO DE CTe (Central de Manifesto Compartilhado).
+                TODAS as ORDENS DE CARREGAMENTOS EMITIDAS SÃO INTEGRADOS A BASE DO MAXICON.</p>
+                    
+                <div class="card">
+                    <img class="card-img-top" src="../assets/img/frete1.png" alt="Frte Maxys">
+                    <div class="card-body">
+                      <p class="card-text"><em>Acesse em: > Gestão de Contratos > Ordem de Carregamento > Home.</em></p>
+                    </div>
+                    </div>
+
+                    <div class="card">
+                      <img class="card-img-top" src="../assets/img/frete2.png" alt="Frte Maxys">
+                      <div class="card-body">
+                        <p class="card-text"><em>Para visualizar os detalhes do contrato, clique sobre ele.</em></p>
+                      </div>
+                      </div>
+
+                      <div class="card">
+                        <img class="card-img-top" src="../assets/img/frete3.png" alt="Frte Maxys">
+                        <div class="card-body">
+                          <p class="card-text"><em>Para editar, visualizar previsão do tempo, ou exluir contrato, clique no ícone ao lado do contrato</em></p>
+                        </div>
+                      </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Gestão de Contratos/Ordem de Carregamento: Consultar Ordem de Carregamento -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                Gestão de Contratos/Ordem de Carregamento: Consultar Ordem de Carregamento
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                Possibilita Consultar uma Ordem de Carregamento já emitida, seja no Aplicativo, na Plataforma ou no Maxicon (TAF27).<br><br>
+                Os dados de entrada para Consultar a Ordem de Carregamento são:<br><br>
+                1. Filial;<br>
+                2. Número da Ordem de Carregamento;<br>
+                Se OC localizado, o PDF com o documento da Ordem de Carregamento será carregado em tela com possibilidade de compartilhamento do PDF.<br><br>
+
+                <div class="card">
+                    <img class="card-img-top" src="../assets/img/emissao.png" alt="Frte Maxys">
+                    <div class="card-body">
+                        </div>
+                        </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Gestão de Contratos/Ordem de Carregamento: Ordem de Carregamento Pendente -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                Gestão de Contratos/Ordem de Carregamento: Ordem de Carregamento Pendente
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                Função que permite <strong>APROVAR</strong> ou <strong>REPROVAR</strong> Ordens de Carregamento que possuam restrição e ou bloqueios de acordo com Regras de Negócios específicas.<br><br>
+                Os bloqueios programados são:<br><br>
+                Documentos e Eventos com vínculo de "Funcionário" ou "Veículo" e "Ordem de Serviço" aberta.<br><br>
+                Funcionalidade aplicável apenas a Frota Transvale e usada pela equipe da Mesa Logística.<br><br>
+            </div>               
+          </div>
+        </div>
+
+        <!-- 4. Gestão de Contratos/Pagamento Carta Frete -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                Gestão de Contratos/Pagamento Carta Frete
+              </button>
+            </h2>
+            <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                Função que permite o Pagamento das Cartas Fretes Transvale (Adiantamento e ou Saldo).<br><br>
+                Os dados de entrada são:<br><br>
+                1. Código de Barras CFe/CTe: Pesquisa da Carta Frete ou DACTe através do código de barras via leitor de documentos;<br>
+                2. Parcela: 1-Adiantamento ou 2-Saldo;<br>
+                <ol>Quando Parcela não informada, o sistema buscará a parcela que consta aberta;</ol>
+                3. CT-e: Número do CT-e;<br>
+                4. Série: Série do CT-e;<br>
+                5. CPF: CPF do Motorista;<br><br>
+                Quando o Campo <strong>Código de Barras</strong> é informado os outros campos são dispensáveis;<br>
+                Se o Código de Barras não for informado, os campos <strong>Parcela, CT-e, Série</strong> e <strong>CPF</strong> são obrigatórios.<br>
+                O CTe localizado é listado no GRID (FIGURA 1)<br><br>
+
+                <div class="card">
+                    <img class="card-img-top" src="../assets/img/carta-frete.png" alt="Frte Maxys">
+                    <div class="card-body">
+                      <p class="card-text"><em>Tela de Acerto de Pagamento de Carta Frete. Acesse: Gestão de Contratos > Pagamento Carta Frete > Home.</em></p>
+                    </div>
+                  </div>
+                  <br>
+
+                  Para a execução do Pagamento basta clicar na linha do CT-e e informar o Peso Destino conforme documentação apresentada.<br>
+
+                  <br>Se Saldo, o Peso Destino deverá ser informado.<br>
+                  <li>Informar o Peso Destino conforme Ticket de Balança apresentada;</li>
+                  <li>As atuais regras já existentes para o Pagamento de Saldo permanecem inalteradas;</li>
+                  <li>Se Peso Destino MAIOR que Peso Carregamento, o valor do Peso deverá ser repetido.</li>
+                    <ol>A Plataforma não permite Peso Destino Superior que Peso Destino;</ol>
+                  <li>Após informar o Peso de Destino, o botão <b>Recalcular</b> deverá ser acionado para recalcular o valor do <b>Saldo</b>;</li>
+                    <ol>Nesse momento todas as regras parametrizadas no Sistema (Contrato, Clifor etc) serão aplicadas;</ol>
+                  <li>O Valor a Pagar será exibido bem como os descontos (Cadastro Gerenciadora de Risco, por exemplo);</li>
+                  <li>Se precisar, os Adicionais de Frete poderão ser usados para compor o Pagamento;</li>
+                    <ol>Os Adicionais de Frete são os mesmos já usados e com as mesmas regras de aplicação;</ol>
+                  <li>Informar o Comprovante de Descarga, <b>OBRIGATÓRIO</b> para o processo;</li>
+                    <ol>Sem o Comprovante anexado, o Pagamento não é realizado;</ol>
+    
+                    <div class="card">
+                      <img class="card-img-top" src="../assets/img/carta-frete1.png" alt="Frte Maxys">
+                      <div class="card-body">
+                        <p class="card-text"><em>Tela de Acerto de Saldo: Peso, Adicional de Frete e Comprovante de Descarga</em></p>
+                    </div>
+                        </div>
+
+                    <div class="card">
+                        <img class="card-img-top" src="../assets/img/carta-frete3.png" alt="Frte Maxys">
+                        <div class="card-body">
+                        <p class="card-text"><em>Tela de Acerto de Saldo: Peso, Adicional de Frete e Comprovante de Descarga</em></p>
+                    </div>
+                      </div>
+                         <br>
+                            Após finalizado, pressionar o botão "Adicionar Pagamento". A partir desse momento, o pagamento é inserido na lista de pagamento, ficando marcado na cor verde.<br><br>
+                            O Sistema permite o pagamento de múltiplos pagamentos, para isso basta repetir os mesmos passos citados acima para inserir um novo.
+                            <br><br>
+                            <div class="card">
+                            <img class="card-img-top" src="../assets/img/carta-frete4.png" alt="Frte Maxys" >
+                            <div class="card-body">
+                                <p class="card-text"><em>Grid de Pagamento de Carta Frete</em></p>
+                            </div>
+                            </div>
+                            <br><br>
+            
+                            Para Finalizar o Pagamento, o botão "Finalizar Pagamento" deverá ser acionado.<br><br>
+                            Nesse momento o sistema irá solicitar os dados do cheque (Número e Série).<br><br>
+                            O sistema separa os cheques quando o valor a pagar for <b>MAIOR</b> que <b>R$3.000,00</b>.<br><br>
+                            Finalizado o processo de pagamento, todos os dados inseridos serão integrados no Maxicon com a geração e execução do Processo de Caixa.<br><br>
+            
+                            <br>
+                            <div class="card">
+                            <img class="card-img-top" src="../assets/img/carta-frete5.jpg" alt="Frte Maxys" style="width: 30rem;">
+                            <div class="card-body">
+                                <p class="card-text"><em>Informar Cheque: Número e Série</em></p>
+                            </div>
+                            </div>
+                </div>
+            </div>
+          </div>
+
+          <!--5. Gestão de Contratos/Pagamento Carta Frete: Relatório Pagamento de CT-e -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                Gestão de Contratos/Pagamento Carta Frete: Relatório Pagamento de CT-e
+              </button>
+            </h2>
+            <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                Função que permite a emissão de Relatórios de Pagamento de Carta Frete mediante seleção de filtros pre selecionados.<br><br>
+                Os dados de entrada são:<br><br>
+                1. Data (DE | ATÉ);<br>
+                2. Parcela: 1-Adiantamento ou 2 - Saldo;<br>
+                3. Filial;<br>
+                4. Código de Barras CFe/CTe;<br>
+                5. CTe;<br>
+                6. Série;<br><br>
+                De acordo com os filtros o relatório é exibido, listando todos os pagamentos realizados.<br><br>
+                O relatório pode ser exportado para o Excel.<br><br>
+
+                <div class="card">
+                    <img class="card-img-top" src="../assets/img/pagamento-cte.png" alt="Frte Maxys">
+                    <div class="card-body">
+                    <p class ="card-text"><em>Relatório Pagamento CT-e</em></p>
+                </div>
+                    </div>
+                </div>
+             </div>
+          </div>
+
+          <!-- 6. Gestão de Contratos/Frete: Cadastro de Frete -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                Gestão de Contratos/Frete: Cadastro de Frete
+              </button>
+            </h2>
+            <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                Funcionalidade que permite o <b>Cadastro de Frete</b> (Contratos) que serão carregados e exibidos no <b>Aplicativo Transvale</b>.<br>
+                Os Fretes cadastrados serão passíveis de consulta diretamente por <b>Usuários Externos</b> (Motoristas Terceiros).<br><br>
+              
+                <div class="card">
+                  <img class="card-img-top" src="../assets/img/cadastro-frete.png" alt="Cadastro de Frete">
+                  <div class="card-body">
+                    <p class ="card-text"><em>Relatório Pagamento CT-e</em></p>
+              
+                        </div>
+                      </div>
+                      <br>
+                
+                <b>O Cadastro de Frete possui as seguintes regras:</b><br><br>
+                <b>1. Cadastrar Frete</b>: Permite a inserção de um novo Frete;<br>
+                <b>2. Exportar para Excel</b>: lista todos os Fretes cadastrados no formato Excel;<br>
+                <b>3. Exportar para PDF</b>: lista todos os Fretes cadastrados no formato PDF;<br>
+                4. O Cadastro de Frete possui validade de <b>48h</b>. Passado esse período ele é excluído automaticamente do sistema;<br>
+                5. É possível editar o Cadastro de Frete, clicando sobre o registro desejado. O campo passível de edição é o valor do Frete;<br>
+                6. Ao editar o Frete, o sistema aplica mais <b>48h</b> de validade considerando a data e hora da edição;<br>
+                É possível também, se desejado, a exclusão do Cadastro de Frete através de botão de ação "Apagar".<br><br>
+                <b>O Cadastro de Frete possui os seguintes campos:</b><br><br>
+                1. <b>Origem</b>: Cidade de Origem;<br>
+                2. <b>Destino</b>: Cidade de Destino;<br>
+                3. <b>Distância</b>: Distância em KM entre Origem x Destino;<br>
+                <ol>O cálculo da distância é realizado através do Google Maps;</ol>
+                4. Produto</b>: Lista de Produtos (Natureza de Carga), conforme cadastros já existentes no Maxicon;<br>
+                5. <b>Espécie</b>: Espécie do Produto, conforme cadastros já existentes no Maxicon;<br>
+                6. <b>Frete Motorista R$</b>: Valor do Frete Motorista conforme Contrato;<br>
+                7. <b>Valor a Combinar</b>: usado quando o Frete Motorista é negociável;<br>
+                8. <b>Empresa Contrato</b>: Filial detentora/responsável pelo Contrato de Frete;<br>
+                9. <b>Observação</b>: campo de uso livre para informar dados adicionais e relevantes ao Contrato de Frete;<br><br>
+                O Frete Cadastro é listado no GRID e disponível para consulta no APP.<br>
+              
+                <div class="card">
+                  <img class="card-img-top" src="../assets/img/Adicionar-frete.png" alt="">
+                  <div class="card-body">
+                    <p class="card-text"><em>Para adicionar, clique no botão: "Cadastrar Frete". </em></p>
+                </div>
+                </div>
+              
+                <div class="card">
+                  <img class="card-img-top" src="../assets/img/edicao-frete.png" alt="">
+                  <div class="card-body">
+                    <p class="card-text"><em>Para editar o frete cadastrado, dê um duplo click no resultado.</em></p>
+                  
+                        </div>
+                      </div>
+                </div>
+            </div>
+          </div>
+
+          <!-- 7. Gestão de Contratos/Frete: Solicitações de Frete -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                Gestão de Contratos/Frete: Solicitações de Frete
+              </button>
+            </h2>
+            <div id="flush-collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                Função que permite a interação entre Motorista Terceiro x Filial para o atendimento de uma solicitação de Frete.<br><br>
+                A partir da pesquisa realizada pelo Motorista Terceiro via APP, as seguintes ações serão disparadas:<br><br>
+                <b>1. Quero Frete:</b><br><br>
+                <li>O APP permite ligação direta para a Filial do Contrato via Dial ou WhatsApp;</li>
+                <li>Nesse momento é realizado o atendimento e negociação;</li><br>
+                <b>2. Solicitar Atendimento:<br><br></b>
+                <li>Será gerado um registro nessa tela para o retorno via ligação ao Motorista para atendimento e negociação;</li>
+                    <ol>1. Nesse momento poderá ser emitido a Ordem de Carregamento ou;</ol>
+                    <ol>2. Informar o motivo da recusa do Frete;</ol>
+                O sistema controla o tempo de vida do registro e o tempo de atendimento;<br>
+                O atendimento poderá ser realizado via WhatsApp diretamente na Plataforma.<br><br>
+                <p style="color: red;">PONTO DE ATENÇÃO IMPORTANTE: O CADASTRO DO MOTORISTA DEVE ESTAR CORRETO, POIS O TELEFONE CONSIDERADO SERÁ O INFORMADO DENTRO DO PROCESSO DE CADASTRO DE MOTORISTA</p><b></b>
+                <b>3. Para o atendimento, basta selecionar as opções disponíveis no Botão de Ação que são:</b><br><br>
+                <li>Adicionar Ordem de Carregamento: Habilita o formulário de emissão de Ordem de Carregamento;</li>
+                <ol>1. O Contrato deverá ser informado;</ol>
+                <ol>2. A Variante deverá ser selecionada;</ol>
+                <ol>3. Preencher os campos do formulário e gerar a Ordem de Carregamento;</ol>
+                <b>Finalizar:</b> finaliza o Atendimento. Usado quando a negociação não é concluída;<br>
+                <ol>1. Informar o motivo e preencher uma observação (opcional);</ol>
+                <ol>2. Motivo de Recusa mediante Cadastro;</ol>
+                <b>Contatar via WhatsApp</b>: será aberto o WhatsApp Web chamando o telefone do Motorista;<br>
+                <b>Excluir</b>: Excluir o registro de atendimento;<br>
+                <ol>1. Baseado em Perfil de Acesso.</ol>
+
+  <div class="card">
+    <img class="card-img-top" src="../assets/img/solicitacao-frete.png" alt="">
+    <div class="card-body">
+      <p class="card-text"><em>Grid de Solicitação de Frete</em></p>
+    </div>
+          </div>
+
+          <div class="card">
+            <img class="card-img-top" src="../assets/img/solicitacao-frete-telefones.png" alt="">
+            <div class="card-body">
+              <p class="card-text"><em>Grid Solicitação de Frete: WhatsApp - Lista de Telefones</em></p>
+            </div>
+                  </div>
+
+                  <div class="card">
+                    <img class="card-img-top" src="../assets/img/solicitacao-frete-recusa.png" alt="">
+                    <div class="card-body">
+                      <p class="card-text"><em>Grid: Solicitação de Frete - Recusa</em></p>
+                    </div>
+                          </div>
+
+                          <div class="card">
+                            <img class="card-img-top" src="../assets/img/solicitacao-frete-recusa-oc.png" alt="">
+                            <div class="card-body">
+                              <p class="card-text"><em>Grid: Solicitação de Frete - Emissão da Ordem de Carregamento - Informar Contrato
+                              </em></p>
+                            </div>
+                                  </div>
+
+                                  <div class="card">
+                                    <img class="card-img-top" src="../assets/img/solicitacao-frete-recusa-oc-emissao.png" alt="">
+                                    <div class="card-body">
+                                      <p class="card-text"><em>Grid: Solicitação de Frete - Emissão da Ordem de Carregamento</em></p>
+                                    </div>
+                                          </div>
+                </div>
+            </div>
+          </div>
+
+          <!-- 8. Gestão de Contratos/Frete: Controle de Solicitação de Frete - Relatório Gerencial -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+                Gestão de Contratos/Frete: Controle de Solicitação de Frete - Relatório Gerencial 
+              </button>
+            </h2>
+            <div id="flush-collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                Relatório Gerencial para acompanhamento em tempo real de todos as solicitações e atendimentos em curso.<br><br>
+                Relatório condicionado a aplicação de Filtros pré-selecionados a saber:<br><br>
+                1. <b>Empresa</b>: Lista de Empresas;<br>
+                2. <b>Produto</b>: Produto (Natureza de Carga);<br>
+                3. <b>Espécie</b>: Espécie da Natureza de Carga;<br>
+                4. <b>Usuário</b>: Lista de Usuário;<br>
+                5. <b>Data Inicial e Data Final</b>;<br>
+                6. <b>Placa</b>;<br>
+                7. <b>Motorista</b>;<br>
+                8. <b>Status</b>: Finalizado/Pendente;<br><br>
+                Possibilidade de extrair o relatório no formato Excel.<br><br>  
+
+  <div class="card">
+    <img class="card-img-top" src="../assets/img/relatorio-gerencial-caminho.png" alt="">
+    <div class="card-body">
+      <p class="card-text"><em>Para exibir o relatório, acesso: Gestão de Contratos > Frete > Solicitações - Relatório Gerencial</em></p>
+    </div>
+          </div>
+
+          <div class="card">
+            <img class="card-img-top" src="../assets/img/relatorio-gerencial.png" alt="">
+            <div class="card-body">
+              <p class="card-text"><em>Contrato de Frete: Relatório Gerencial das Solicitações</em></p>
+            </div>
+                  </div>
+                
+               </div>
+            </div>
+          </div>
+
+          <!-- 9. Gestão de Contratos/Central de Manifesto Compartilhado/Emissão -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+                Gestão de Contratos/Central de Manifesto Compartilhado/Emissão (FALTAM IMAGENS)
+              </button>
+            </h2>
+            <div id="flush-collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                Função que permite a emissão de CTe diretamente pela Plataforma Transvale.<br><br>
+    A emissão de CTe contempla todas as operações/emissões já existentes, exceto <b>SÉRIE X.</b><br><br>
+
+    <div class="card">
+      <img class="card-img-top" src="../assets/img/emissao-cte.png" alt="">
+      <div class="card-body">
+        <p class="card-text"><em>Para exibir a tela de emissão de CTe, acesse: Gestão de Contratos > Ordem de Carregamento > Home.      </em></p>
+        </div>
+      </div>
+      <br>
+
+    <p style="color: red;">Quando SUBCONTRATAÇÃO ou OPERAÇÃO MULTIMODAL, O CTe de Origem deverá ser informado para permitir a emissão do CTe Transvale.</p><b></b>
+    <b>O Formulário de Emissão de CTe possui os seguintes filtros:</b><br><br>
+    1. <b>Data Inicial e Data Final</b>: Lista de Empresas;<br>
+    2. <b>Contrato</b>: Produto (Natureza de Carga);<br>
+    3. <b>OC</b>: Espécie da Natureza de Carga;<br>
+    4. <b>CT-e</b>: Lista de Usuário;<br>
+    5. <b>Placa</b>;<br>
+    <ol>Será listado as Ordens de Carregamento de acordo com a Placa;</ol>
+    6. <b>Filial</b>: Lista de Filial;<br>
+    7. <b>Negócio</b>: Tipo de Negócio Frota/Agenciamento;<br>
+    8. <b>Status</b>: Aguardando Emissão, CTe Cancelado, Emissão Finalizada, Erro na Emissão, Na Fila de Emissão, Processando Emissão;<br>
+    9. <b>Usuário OC</b>:  lista de usuários emissores das Ordens de Carregamento;<br>
+    10. <b>Usuário CT-e</b>: lista de usuários emissores do CT-e.<br><br> 
+    
+    <b>O Processo de Emissão de CTe possui as seguintes regras:</b><br><br>
+
+    1. Necessário emissão de <b>Ordem de Carregamento</b>;
+    <li>Todas as informações necessárias para a emissão do CTe é contida na Ordem de Carregamento;</li><br>
+
+    2. Vínculo entre <b>Ordem de Carregamento x NFe</b>;
+  <li>Informar a NFe de emissão preenchendo os campos do formulário com os dados da NF-e;</li>
+  <li>Possível informar a chave de acesso: se NFe integrada na Base do Maxicon, os campos são preenchidos automaticamente;</li>
+  <li>Possível carregar o XML da NFe: os campos são preenchidos automaticamente;<br><br></li>
+
+    3. Informar o Valor de Mercadoria de Seguro<br>
+    <li>Sistema permite alterar o Valor de Mercadoria de Seguro SEMPRE para CIMA, NUNCA para BAIXO;</li><br>
+
+    A Ordem de Carregamento emitida é baseada em <b>Contrato x Variante</b>. De acordo com o Tipo de Negócio (<b>Frota ou Agenciamento</b>) o processo de emissão terão regras distintas.<br><br>
+    
+    <b><p style="color: red;">Tipo de Negócio FROTA</p></b>
+    1. Emitir a Ordem de Carregamento;<br>
+    2. Selecionar a Ordem de Carregamento emitida;<br>
+    3. Vincular a NF-e;<br>
+    4. Informar o Valor de Mercadoria de Seguro;<br>
+    5. Emitir CTe;<br>
+    <ol> Confirmar a emissão da MDFe (Opcional);</ol>
+    6. Após emissão, DACT-e, Carta Frete e MDF-e serão emitidos;<br>
+    7. Geração dos documentos no formato PDF podendo ser compartilhados via WhatsApp ou E-mail;<br>
+    8. Quando Tipo de Negócio Tipo Frota, o Motorista informado na Ordem de Carregamento terá disponibilizado no APP os documentos emitidos para Download; <br> <br>
+
+    <b><p style="color: red;">Tipo de Negócio AGENCIAMENTO</p></b>
+    1. Emitir a Ordem de Carregamento;<br>
+    2. Selecionar a Ordem de Carregamento emitida;<br>
+    3. Vincular a NF-e;  <br>
+    4. Informar o Valor de Mercadoria de Seguro ;  <br>
+    5. Confirmar valor do Frete Motorista;  <br>
+    <ol>
+      <li>Frete Motorista carregado conforme parametrização do Contrato vinculado a Ordem de Carregamento;</li> 
+    <li>Se Valor do Frete Alterado, o valor do adiantamento é carregado;</li>  
+    </ol>
+    <li>Valor do Adiantamento calculado conforme parametrização do percentual definido em contrato;</li>
+    <li>O Valor do Adiantamento pode ser alterado para BAIXO, NUNCA acima do limite calculado;  </li><br>
+
+    6. Informar os Adicionais de Frete e Valor (Opcional);<br>
+    7. Informar a Data de Entrega  ;<br>
+    8. Informar o Prazo de Entrega (HORAS); <br>
+    9. Informar o Prazo Descarga (HORAS);<br> 
+    10. Observações CTe (Opcional);<br> 
+    11. Selecionar o Tipo de Pagamento da Carta Frete;<br>
+    <ol>
+      <li>Se não informado será considerado o Pagamento padrão via Cheque;</li>
+      <li>Lista de Carta Frete já usadas no Maxicon:</li>
+    </ol>
+    <ol>
+      <li>CCOVMAIS;</li>
+      <li>CIOTPAG;</li>
+      <li>PAMCARY;</li>
+    </ol>
+  1. Quando Pamcary obrigatório informar Operação, Favorecido e Meio de Pagamento;<br>
+  <ol><li>Favorecido;</li></ol>
+  <ol><li>Contratado;</li>
+  <li>Motorista;</li></ol>
+
+  2. Meio de Pagamento;<br>
+    <ol><li>Conta Corrente;</li>
+    <li>Cartão: será considerado o Cartão do Motorista informado no Cadastro de Motorista; </li></ol>
+  3. Espécie: indica que o Valor do Pedágio calculado será pago/liberado no Saldo da Carta Frete;<br>
+  4. SOLLUS;<br>
+  5. SP RISK;<br>
+  6. TARGET;<br>
+
+  12. Informar o Operador do Pagamento do Pedágio;<br>
+  <ol>
+    <li>Seleção do Pedágio condicionado ao Tipo de Carta Frete;  </li>
+    <li>O Sistema já está parametrizado de acordo com as regras entre CFe x VPe;  </li>
+  </ol>
+
+  <b><p style="color: red;">STATUS Emissão CTe</p></b>
+  1. <b>Aguardando Emissão</b>;<br>
+  <ol>
+  <li>Ordem de Carregamento na lista de Emissão;</li>
+  </ol>
+  2. <b>CT-e Cancelado</b>;<br>
+  <ol>
+    <li>CT-e Cancelado;  </li>
+    </ol>
+  3. <b>Emissão Finalizada</b>;<br>
+  <ol>
+    <li> Emissão realizada com Sucesso;  </li>
+    </ol>
+  4. <b>Erro na Emissão</b>;<br>
+  <ol>
+    <li>Erro na Emissão;  </li>
+    <li>Validação conforme regras parametrizadas;  </li>
+    </ol>
+  5. <b>Na Fila de Emissão</b>;<br>
+  <ol>
+    <li>Ordem de Carregamento na Fila de Emissão de CTe;  </li>
+    </ol>
+  6. <b>Processando Emissão</b>;<br>
+  <ol>
+    <li>Ordem de Carregamento da Fila de Processamento de CTe;  </li>
+    </ol>
+
+    <b><p style="color: red;">Sequenciamento  </p></b>
+    Aguardando Emissão --> Na Fila de Emissão --> Processando Emissão. Os resultados poderão ser:
+    <li>Emissão Finalizada ou;</li>
+    <li>Erro na Emissão
+      <li>
+        Retornado o Motivo do erro;
+      </li>
+    </li>
+
+    Passo a Passo Emissão de CTe<br><br>
+
+    <b><p style="color: red;">Tipo de Negócio FROTA  </p></b>
+    Passo 1: Selecionar a Ordem de Carregamento;<br><br>
+    <li>Clicar no Botão de Ação e clicar em Emitir CTe;  </li><br>
+
+    <div class="card">
+      <img class="card-img-top" src="../assets/img/emitir-cte.png" alt="">
+      <div class="card-body">
+        <p class="card-text"><em>CMC - Seleção de Ordem de Carregamento      </em></p>
+        </div>
+      </div>
+            <br>
+
+  <b>Passo 2: Aba Dados Gerais</b>
+  <li>Informação do Número Ordem de Carregamento;   </li>  
+  <li>CPF do Usuário Emissor do CT-e; </li>         
+  <li>Filial: Filial da Ordem de Carregamento x Contrato; </li>        
+  <li>Tipo de Serviço: Indicador do tipo de operação de Frete conforme parametrização do Contrato;     </li>    
+  <li>Indicador de Negociação do CTe MultiModal: indica se o Contrato é MultiModal conforme parametrização do Contrato;  </li>       
+  <li>Chave de Acesso CTe MultiModal: Preenchido após emissão do CTe de uma operação MultiModal;</li><br>
+
+            <div class="card">
+              <img class="card-img-top" src="../assets/img/dados-gerais-cte.png" alt="">
+              <div class="card-body">
+                <p class="card-text"><em>Contrato de Frete: Relatório Gerencial das Solicitações</em></p>
+              </div>
+              </div>
+              <br>
+              <b>Passo 3: Informar NFe</b>
+              <li>Chave de Acesso: informar Chave de Acesso. Se NFe integrada na Base Maxicon, todos os campos são preenchidos automaticamente;</li>
+              <li>XML Nota: carregar o arquivo XML da NFe. Após carregamento, todos os campos são preenchidos automaticamente;</li>
+              <li>Caso Chave de Acesso e XML da Nota não informado, os campos do formulário deverão ser preenchidos conforme dados da NFe;</li>
+              + Adicionar NF: se necessário informar mais uma NFe para a emissão do CTe, basta clicar no respectivo botão e repetir os passos para a outra NFe;<br><br>
+              ABA Documentos: Será habilitado para informar o CTe de Origem quando Emissão for para um Tipo de Operação SubContratação ou MultiModal;<br><br>
+              Ao Final Pressionar botão Emitir CT-e;<br><br>
+              Informar o Valor de Mercadoria e acompanhar a emissão do CT-e; <br><br>
+              Informar se Deseja emitir MDF-e;<br><br>
+
+              <div class="card">
+                <img class="card-img-top" src="../assets/img/emissao-cte-nota.png" alt="">
+                <div class="card-body">
+                  <p class="card-text"><em>Contrato de Frete: Relatório Gerencial das Solicitações</em></p>
+                </div>
+                </div>
+              </br>
+
+  Quando CTe possuir Status <b>"Emissão Finalizada"</b> no botão de Ação será habilitado opção para impressão dos Documentos de Transporte emitido. Os documentos serão disponibilizados conforme parametrização do Contrato;<br><br>
+  <li>DACT-e;</li>
+  <li>MDF-e;</li>
+  <li>Carta Frete;</li><br>
+
+
+  Se a emissão apresentar <b>"Erro na Emissão"</b> ao clicar na linha do Grid da Ordem de Carregamento, os sistema abrirá os detalhes com a descrição retornada pelo Maxicon.
+                <div class="card">
+                  <img class="card-img-top" src="../assets/img/" alt="">
+                  <div class="card-body">
+                    <p class="card-text"><em>Contrato de Frete: Relatório Gerencial das Solicitações</em></p>
+                  </div>
+                  </div>
+
+                  <div class="card">
+                    <img class="card-img-top" src="../assets/img/" alt="">
+                    <div class="card-body">
+                      <p class="card-text"><em>Contrato de Frete: Relatório Gerencial das Solicitações</em></p>
+                    </div>
+                    </div>
+                    <div class="card">
+                      <img class="card-img-top" src="../assets/img/" alt="">
+                      <div class="card-body">
+                        <p class="card-text"><em>Contrato de Frete: Relatório Gerencial das Solicitações</em></p>
+                      </div>
+                    </div>
+                      <div class="card">
+                        <img class="card-img-top" src="../assets/img/" alt="">
+                        <div class="card-body">
+                          <p class="card-text"><em>Contrato de Frete: Relatório Gerencial das Solicitações</em></p>
+                        </div>
+                      </div>
+
+  <b>Passo a Passo Emissão de CTe</b>
+  <b><p style="color: red;">"Tipo de Negócio AGENCIAMENTO</p></b>
+
+  Passo 1: Selecionar a Ordem de Carregamento;<br><br>
+  <li>Clicar no Botão de Ação e clicar em Emitir CTe;</li>
+
+  <div class="card">
+    <img class="card-img-top" src="../assets/img/" alt="">
+    <div class="card-body">
+      <p class="card-text"><em>Contrato de Frete: Relatório Gerencial das Solicitações</em></p>
+    </div>
+  </div>
+
+  Passo 2: Informar NFe<br><br>
+  <li>Chave de Acesso: informar Chave de Acesso. Se NFe integrada na Base Maxicon, todos os campos são preenchidos automaticamente;</li>
+  <li>XML Nota: carregar o arquivo XML da NFe. Após carregamento, todos os campos são preenchidos automaticamente;</li>
+  <li>Caso Chave de Acesso e XML da Nota não informado, os campos do formulário deverão ser preenchidos conforme dados da NFe;</li><br><br>
+
+  + Adicionar NF: se necessário informar mais uma NFe para a emissão do CTe, basta clicar no respectivo botão e repetir os passos para a outra NFe;<br><br>
+  Informar <b>VALOR DE MERCADORIA SEGURO:</b><br><br>
+  Passo 2 - Documento: Será habilitado para informar o CTe de Origem quando Emissão for para um Tipo de Operação SubContratação ou MultiModal;<br><br>
+
+  <div class="card">
+    <img class="card-img-top" src="../assets/img/" alt="">
+    <div class="card-body">
+      <p class="card-text"><em>Contrato de Frete: Relatório Gerencial das Solicitações</em></p>
+    </div>
+  </div>
+
+  <b>Passo 3: Ajustar/Confirmar valores de Frete e Adiantamento</b><br><br>
+  <li>Valor do Frete já vem preenchido conforme parametrização do Contrato;</li>
+    <li>O valor do Frete poderá ser alterado SEMPRE para BAIXO.</li>
+      <li>O Valor do Adiantamento é calculado levando em consideração o valor do frete x Peso ou Volume da NFe vinculada. O cálculo do adiantamento leva em consideração o valor % parametrizado em Contrato;</ul>
+        <li>O Valor do Adiantamento poderá ser alterado SEMPRE para BAIXO, podendo ser R$0,00;</li>
+          <li>Adicionais de Frete: Opcional de acordo com a negociação;</li>
+            <li>Data de Entrega: informar a data prevista para entrega no formato DD/MM/AAAA</li>
+              <li>Prazo Entrega (HORAS): informar o prazo de entrega no formato HH:MM;</li>
+                <li>Prazo Descarga (HORAS): informar o prazo de descarga no formato HH:MM;</li>
+                  <li>Observações CTe: campo de uso livre para qualquer informação adicional no CTe (Opcional)</li>
+
+                  <div class="card">
+                    <img class="card-img-top" src="../assets/img/" alt="">
+                    <div class="card-body">
+                      <p class="card-text"><em>Contrato de Frete: Relatório Gerencial das Solicitações</em></p>
+                    </div>
+                  </div>
+
+  <b>Passo 4: Informar o tipo de Pagamento do Frete (Carta Frete);</b><br><br>
+  <li>Selecionar conforme operação em curso;</li>
+  <li>Se nada selecionado, o pagamento do frete será no Cheque;</li>
+  <li>Se Selecionado Operador CFe "Pamcary", os campos "Operação", "Favorecido" e "Meio de Pagamento" são obrigatórios;</li>
+  <ul>
+    <li><b>Operação</b>: Selecionar conforme a característica do Veículo vinculado na Ordem de Carregamento;</li>
+    <li><b>Favorecido</b>: Contratado ou Motorista;</li>
+    <ul>
+      <li>Dados serão considerados de acordo com o cadastro de Motorista/Junção;    </li>
+    </ul>
+    <li><b>Meio de Pagamento</b>:
+      <li><b>Conta Corrente</b>: NÃO USADO;    </li>
+      <li><b>Cartão</b>: Pagamento via Cartão;    </li>
+      <li><b>Espécie</b>: indicativo que o Pedágio será pago no Cartão e o valor será liberado no Saldo do Pagamento da Carta Frete;    </li>
+
+      <div class="card">
+        <img class="card-img-top" src="../assets/img/" alt="">
+        <div class="card-body">
+          <p class="card-text"><em>Contrato de Frete: Relatório Gerencial das Solicitações</em></p>
+        </div>
+      </div>
+
+      <b>Passo 5: Informar o Tipo de Pagamento Pedágio.</b>
+      <li>Se Pagamento do Frete via Carta Frete Padrão (Cheque), nenhum operador VPe deverá ser informado;</li>
+      <li>Se no Passo 4 CFe for informado o Operador Pamcary, o Passo 5 já estará vinculado não cabendo nenhuma ação do usuário.</li>
+
+    <div class="card">
+      <img class="card-img-top" src="../assets/img/" alt="">
+      <div class="card-body">
+        <p class="card-text"><em>Contrato de Frete: Relatório Gerencial das Solicitações</em></p>
+      </div>
+    </div>
+
+  <b>Ao Final Pressionar botão Emitir CT-e;</b><br><br>
+  Informar se Deseja emitir MDF-e;<br><br>
+  Acompanhar a emissão do CTe;<br><br>
+
+  Quando CTe possuir Status "Emissão Finalizada", no botão de Ação será habilitado opção para impressão dos Documentos de Transporte emitido. Os documentos serão disponibilizados conforme parametrização do Contrato;<br><br>
+  <li>DACT-e;</li>
+  <li>MDF-e;</li>
+  <li>Carta Frete;</li>
+  <li>CIOT;</li>
+
+  <div class="card">
+    <img class="card-img-top" src="../assets/img/" alt="">
+    <div class="card-body">
+      <p class="card-text"><em>Contrato de Frete: Relatório Gerencial das Solicitações</em></p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img class="card-img-top" src="../assets/img/" alt="">
+    <div class="card-body">
+      <p class="card-text"><em>Contrato de Frete: Relatório Gerencial das Solicitações</em></p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img class="card-img-top" src="../assets/img/" alt="">
+    <div class="card-body">
+      <p class="card-text"><em>Contrato de Frete: Relatório Gerencial das Solicitações</em></p>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+
+  <!-- 10 . Gestão de Contratos/Central de Manifesto Compartilhado/Consultar CT-e Emitido -->
+  <div class="accordion accordion-flush" id="accordionFlushExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTen" aria-expanded="true" aria-controls="flush-collapseTen">
+          Gestão de Contratos/Central de Manifesto Compartilhado/Consultar CT-e Emitido
+        </button>
+      </h2>
+          <div id="flush-collapseTen" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">   
+  Função que permite pesquisar <b>TODAS</b> as emissões de <b>CT-e</b> cujo status seja <b>"Emissão Finalizada"</b> ou <b>"Erro na Emissão"</b> ou <b>"CTe Cancelado</b>".<br><br>
+  No caso de <b>"Erro na Emissão"</b>, após ajustar o erro indicado, a remissão poderá ser realizada diretamente por esta tela, sem a necessidade de criar nova Ordem de Carregamento e ou preenchimento dos dados relativo a emissão do CT-e.<br><br>
+  <b>Observação: O detalhe do erro da Emissão é obtido em "Gestão de Contratos/Central de Manifesto Compartilhado/Home", pesquisando pela Ordem de Carregamento, Contrato, Placa ou Data de Emissão. Ao clicar no registro do Grid será aberto a tela com o detalhe e descrição do erro retornado.</b> 
+  <br><br>O sistema carrega o formulário da emissão original já preenchido, necessitando apenas clicar em Emitir CT-e</b>.<br><br>
+
+  Nesta tela também é possível pesquisar mediante filtros pre selecionados, as emissões já realizadas e consultar os documentos de transportes emitidos <b>(DACTe, Carta Frete, CIOT, MDF-e)</b>. Os documentos poderão ser consultados, clicando na <b>COLUNA Documentos</b>. Os sinalizados na cor <b>VERDE</b> indicam que a emissão foi <b>realizada com sucesso</b> e na cor <b>VERMELHA</b> são os que apresentaram <b>Erro na Emissão</b>.<br><br>
+
+  <div class="card">
+    <img class="card-img-top" src="../assets/img/consultar-cte-emitido.png" alt="">
+    <div class="card-body">
+      <p class="card-text"><em>Para exibir CTe emitido, acesse: Gestão de Contratos > Central de Manifesto Compartilhado > Consultar CT-e Emitido. </em></p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img class="card-img-top" src="../assets/img/emitir-cte-frota.png" alt="">
+    <div class="card-body">
+      <p class="card-text"><em>Emissão de CT-e</em></p>
+    </div>
+  </div>
+
+                </div>
+            </div>
+          </div>
+
+          <!-- 11. Gestão de Contratos/Central de Manifesto Compartilhado/Relatório Emissão CT-e -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEleven" aria-expanded="false" aria-controls="flush-collapseEleven">
+                Gestão de Contratos/Central de Manifesto Compartilhado/Relatório Emissão CT-e
+              </button>
+            </h2>
+            <div id="flush-collapseEleven" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                Relatório Gerencial de Emissão de CT-e. O relatório é emitido conforme seleção de filtros pré-selecionados.<br><br>
+                O relatório contempla emissões de CT-e da Plataforma e Maxicon.<br><br>
+                O relatório poderá ser exportado para o Formato Excel.   <br><br>
+
+                    <div class="card">
+                    <img class="card-img-top" src="../assets/img/relatorio-emissao-cte.png" alt="">
+                        <div class="card-body">
+                    <p class="card-text"><em>Para exibir CT-e emitido, acesse: Gestão de Contratos > Central de Manifesto Compartilhado > Relatório Emissão CT-e.</em></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 12. Gestão de Contratos/Relatórios: Consultar Conjunto -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse12" aria-expanded="false" aria-controls="flush-collapse12">
+                Gestão de Contratos/Relatórios: Consultar Conjunto
+              </button>
+            </h2>
+            <div id="flush-collapse12" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                Relatório Gerencial de Emissão de CT-e. O relatório é emitido conforme seleção de filtros pré-selecionados.<br><br>
+                O relatório contempla emissões de CT-e da Plataforma e Maxicon.<br><br>
+                O relatório poderá ser exportado para o Formato Excel.   <br><br>
+
+                    <div class="card">
+                    <img class="card-img-top" src="../assets/img/relatorio-emissao-cte.png" alt="">
+                        <div class="card-body">
+                    <p class="card-text"><em>Para exibir CT-e emitido, acesse: Gestão de Contratos > Central de Manifesto Compartilhado > Relatório Emissão CT-e.</em></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 13. Gestão de Contratos/Relatórios: Relatório de Motorista Carregado -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse13" aria-expanded="false" aria-controls="flush-collapse13">
+                Gestão de Contratos/Relatórios: Relatório de Motorista Carregado
+              </button>
+            </h2>
+            <div id="flush-collapse13" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    Permite pesquisar todas as emissões de CTe visualizando os Motoristas Embarcados em um determinado dia. Através dos Filtros UF e Município de Descarga os dados podem ser refinados de acordo com a aplicação dos filtros.<br><br>
+                    Os dados de entrada são:<br><br>
+                    1. Data (DE | ATÉ);<br><br>
+                    2. UF;<br><br>
+                    3. Município de Descarga: Se UF selecionado, os Munícipios serão carregados de acordo com a UF;<br><br>
+                    4. Natureza da Carga;<br><br>
+                  
+                    De acordo com o filtro aplicado, será retornada uma lista de Motorista que estão embarcados pela Transvale.<br><br>
+                    O Relatório apresenta os seguintes campos:<br><br>
+                  
+                    <li>Motorista: Nome, CPF e Contato;</li>
+                    <li>Conjunto: Veículo, Carreta 1, 2, 3;</li>
+                    <li>Data de Carregamento;</li>
+                    <li>Produto;</li>
+                    <li>Origem e Destino;</li>
+                    <li>Peso Bruto e Peso Líquido;</li>
+                    <li>Cliente de Descarga;</li><br>
+                  
+                    Na coluna do Motorista existe um balão com um sinal de <b>"!"</b>  que trará os detalhes do cadastro do motorista mais Produto, Destino e Origem.<br><br>
+                    Será habilitado o Campo "Mensagem" que permitirá enviar a todos os Motoristas retornados na Consulta uma mensagem SMS. A mensagem será de livre digitação com quantidade limitada de 140 caracteres. A mensagem será enviada com o prefixo "Transvale Informa: <+ Mensagem>.<br><br>
+                    A mensagem poderá ter quebra por linha.<br><br>
+                    Por padrão recomendamos o seguinte formato de mensagem:<br><br>
+                    Linha 1: Rota e Produto<br><br>
+                    Linha 2: Rota e Produto<br><br>
+                    Linha 3: Nome da Filial, Nome dos Embarcadores e dados para contato.<br><br>
+                    O Relatório de Motorista Carregado poderá ser extraído no formato Excel e PDF.<br><br>
+
+                    <div class="card">
+                    <img class="card-img-top" src="../assets/img/relatorio-emissao-cte.png" alt="">
+                        <div class="card-body">
+                    <p class="card-text"><em>Para exibir CT-e emitido, acesse: Gestão de Contratos > Central de Manifesto Compartilhado > Relatório Emissão CT-e.</em></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 14. Gestão de Contratos/Relatórios: Relatório de Contrato -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse14" aria-expanded="false" aria-controls="flush-collapse14">
+                Gestão de Contratos/Relatórios: Relatório de Contrato
+              </button>
+            </h2>
+            <div id="flush-collapse14" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    Relatório para Visualizar a evolução dos Contratos de Frete.<br>
+                   
+                    <div class="card">
+                    <img class="card-img-top" src="../assets/img/relatorio-emissao-cte.png" alt="">
+                        <div class="card-body">
+                    <p class="card-text"><em>Para exibir CT-e emitido, acesse: Gestão de Contratos > Central de Manifesto Compartilhado > Relatório Emissão CT-e.</em></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <!-- 15. Gestão de Contratos/Relatórios: Relatório Embarque Raízen -->
+         <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse15" aria-expanded="false" aria-controls="flush-collapse15">
+                Gestão de Contratos/Relatórios: Relatório Embarque Raízen
+              </button>
+            </h2>
+            <div id="flush-collapse15" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    Relatório Específico para Operações Raízen para automatizar processo de Prestação de Conta/Reembolso de Pedágios.<br><br>
+                    O preenchimento dos filtros do relatório se dá através:<br><br>
+                    <ol>
+                    <li>Período de Datas;</li>
+                    <li>Cte: Número do CTe;</li>
+                    <li>Placa: Placa do Veículo prestador do Serviço;</li>
+                    <li>Pagador: pesquisado através do nome ou CLIFOR;</li>
+                    </ol>
+
+                    <div class="card">
+                        <img class="card-img-top" src="../assets/img/raizen.png" alt="">
+                            <div class="card-body">
+                        <p class="card-text"><em>Para exibir o relatório de embarque, acesse: Gestão de Contratos > Relatórios > Embarque Raízen.</em></p>
+                            </div>
+                        </div>                      
+                </div>
+            </div>
+        </div>
+
+<!-- 16. Gestão de Contratos/Relatórios: Relatório Embarque -->
+<div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse16" aria-expanded="false" aria-controls="flush-collapse16">
+        Gestão de Contratos/Relatórios: Relatório Embarque
+      </button>
+    </h2>
+    <div id="flush-collapse16" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+        Relatório Específico para Prestação de Contas e Controle de Embarques Realizados por Cliente Pagador.<br><br>
+
+        <div class="card">
+            <img class="card-img-top" src="../assets/img/embarque.png" alt="">
+                <div class="card-body">
+            <p class="card-text"><em>Para exibir o relatório de embarque, acesse: Gestão de Contratos > Relatórios > Embarques. </em></p>
+                </div>
+            </div>                      
+    </div>
+</div>
+</div>
+
+<!-- 17. Gestão de Contratos/Relatórios: Relatório de Emissão de Ordem de Carregamento-->
+<div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse17" aria-expanded="false" aria-controls="flush-collapse17">
+        Gestão de Contratos/Relatórios: Relatório de Emissão de Ordem de Carregamento
+      </button>
+    </h2>
+    <div id="flush-collapse17" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+            Relatório para Gestão das Emissões de Ordem de Carregamento.<br><br>
+            Possui Visão <b>Analítica</b> e <b>Sintética</b>.<br><br>
+            O Modo <b>Analítico</b> lista todos as Ordens que atendam ao critério de busca informado nos Filtros.<br><br>
+            O Modo <b>Sintético</b> retorna os percentuais de acordo com o total emitido levando em consideração <b>Usuário</b> ou <b>Filial</b>.<br><br>
+
+        <div class="card">
+            <img class="card-img-top" src="../assets/img/emissao-analitica.png" alt="">
+                <div class="card-body">
+                  
+            <p class="card-text"><em>Para exibir o relatório de Ordem de Carregamento, acesse: Gestão de Contratos > Relatórios > Emissão de Ordem de Carregamento (Analítico). </em></p>
+                </div>
+            </div>   
+            
+            <div class="card">
+                <img class="card-img-top" src="../assets/img/emissao-sintetica.png" alt="">
+                    <div class="card-body">
+                      
+                <p class="card-text"><em>Para exibir o relatório de Ordem de Carregamento, acesse: Gestão de Contratos > Relatórios > Emissão de Ordem de Carregamento (Sintético) </em></p>
+                    </div>
+                </div>  
+    </div>
+</div>
+</div>
+
+<!-- 18. Gestão de Contratos/Relatórios: Consultar Documento de Transporte-->
+<div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse18" aria-expanded="false" aria-controls="flush-collapse18">
+        Gestão de Contratos/Relatórios: Consultar Documento de Transporte
+      </button>
+    </h2>
+    <div id="flush-collapse18" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+            Permite consultar os Documentos de Transportes já emitidos (DACT-e, MDF-e, CIOT e Contrato de Frete). O sistema, ao localizar o documento, carrega em tela no formato PDF podendo ser impresso, salvo ou compartilhado.
+            Para a consulta os seguintes filtros devem ser considerados:
+            <li>Filial;</li>
+            <li>Número e Série do CTe;</li>
+            <li>Tipo de Documento.</li>
+
+            <div class="card">
+                <img class="card-img-top" src="../assets/img/consultar-doc-transporte.png" alt="">
+                    <div class="card-body">
+                <p class="card-text"><em>Para exibir documento de transporte, acesse: Gestão de Contratos > Relatórios > Consultar Documento de Transporte.</em></p>
+                    </div>
+                </div>  
+
+        </div>
+    </div>  
+</div>
+
+<!-- 19. Gestão de Contratos/Relatórios: Consultar Documento de Transporte-->
+<div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse19" aria-expanded="false" aria-controls="flush-collapse19">
+        Gestão de Contratos/Relatórios: Consultar NFe / CTe
+      </button>
+    </h2>
+    <div id="flush-collapse19" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+
+            Permite consultar Nota Fiscal Eletrônica (NFe) ou Comunicado de Transporte Eletrônico (CTe). 
+            Para a consulta os seguintes filtros devem ser considerados:
+            <li>Chave de Acesso;</li>
+            <li>Tipo: NFe ou CTe;</li>
+            <li>Filial;</li><br>
+            O Resultado da Pesquisa será o retorno do <b>XML</b> e <b>PDF</b> de acordo com o tipo de documento pesquisado.
+        <b> PONTO DE ATENÇÃO: Funcionalidade baseado em integração externa. Pode ocorrer instabilidade no uso do serviço.</b><br><br>
+
+        <div class="card">
+            <img class="card-img-top" src="../assets/img/consultar-nfe.png" alt="">
+                <div class="card-body">
+            <p class="card-text"><em>Para exibir/consultar NF-e/CTe, acesse: Gestão de Contratos > Relatórios > Consultar NF-e/CT-e.</em></p>
+                </div>
+            </div>  
+        </div>
+    </div>  
+</div>
+
+
+<!-- 20. Gestão de Contratos/Relatórios: Relatório de Cadastro de Junção-->
+<div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse20" aria-expanded="false" aria-controls="flush-collapse20">
+        Gestão de Contratos/Relatórios: Relatório de Cadastro de Junção
+      </button>
+    </h2>
+    <div id="flush-collapse20" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+
+            <b>Relatório de Uso Exclusivo da Matriz</b>. Tem como objetivo listar os totais de Cadastros de Motorista/Junção realizados em um período de Data por Filial x Usuário.<br><br>
+            Possui Visão <b>Analítica</b> e <b>Sintética</b>.<br><br>
+            A Visão <b>Analítica</b> lista de forma detalhada os cadastros realizados.<br><br>
+            A Visão <b>Sintética</b> é uma representação do Total em % por Usuário. <br><br>
+            Possui exportação para o formato <b>Excel</b>.<br><br>
+
+            <div class="card">
+                <img class="card-img-top" src="../assets/img/juncao.png" alt="">
+                    <div class="card-body">
+                <p class="card-text"><em>Para exibir os relatórios, acesse: Gestão de Contratos > Relatórios > Relatório Cadastro de Junção.             </em></p>
+                    </div>
+                </div>  
+
+            <div class="card">
+                <img class="card-img-top" src="../assets/img/analitico-sintetico.png" alt="">
+                    <div class="card-body">
+                <p class="card-text"><em>Relatório de Cadastro de Junção: Analítico                </em></p>
+                    </div>
+                </div>  
+
+                </div>
+                </div>
+                </div>
+
+ <!-- 21. Gestão de Contratos: Dashboard-->
+<div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse21" aria-expanded="false" aria-controls="flush-collapse21">
+        Gestão de Contratos: Dashboard (FALTAM IMAGENS)
+      </button>
+    </h2>
+    <div id="flush-collapse21" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+
+Dashboard para Visualizar em Tempo Real os resultados das Emissões das Ordens de Carregamento/Contratos e Dados Históricos.<br><br>
+Os Dados Históricos são:<br><br>
+<ol>
+<li>Total de CT-e Emitido por Filial;</li>
+<li>Total de CT-e Emitido por Usuário;</li>
+<li>Total de Ordem de Carregamento Emitido por Empresa;</li>
+<li>Total de Ordem de Carregamento Emitido por Usuário;</li>
+<li>Total de Embarque por UF de Destino;</li>
+<li>Total de Embarque por Motorista;</li>
+<li>Total de Embarque por Transportados.</li>
+</ol>
+Todas as visões  permitem consultar o Dia Corrente, Acumulado de 7 Dias e Período de Datas, possuem temporizador para atualização automática ou a gosto do Usuário.
+
+            <div class="card">
+                <img class="card-img-top" src="../assets/img/novo.gif" alt="">
+                    <div class="card-body">
+                <p class="card-text"><em>POR UM GIF AQUI             </em></p>
+                    </div>
+                </div>  
+
+                
+
+
+
+
+
+         
+      </div>
+
+<!-- Accordion -->
+      
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center">
+          
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Transvale<span></span></h3>
+            <p>
+              Av. Dr. Ezuel Portes, 3399. <br>
+              Cascavel, Paraná<br>
+              <br>
+              <strong>Fone:</strong> (45) 3229-8787<br>
+              <strong>E-mail:</strong> equipe.ti@transvale.com.br<br>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Links rápidos</h4>
+            <ul>
+              <ul>
+                <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="index.html#about">Sobre</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="index.html#services">Instruções</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="inner-page-two.html">Conhecimento</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+
+          
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Nossas redes sociais</h4>
+            <p>Fique por dentro de nossas novidades</p>
+            <div class="social-links mt-3">
+              <a href="https://www.facebook.com/transvaletransportesoficial/" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="https://www.instagram.com/transvaletransportes/" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="https://br.linkedin.com/company/transvaletransportes" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container py-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Transvale</span></strong>. Todos os direitos reservados
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bizland-bootstrap-business-template/ -->
+        Designed by <a href="https://www.transvale.com.br/">Transvale</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
