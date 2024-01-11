@@ -100,6 +100,8 @@
       <p>Selecione o tópico desejado para visualizar as informações.</p>
   </div>
 
+ 
+
 <!-- índice -->
 <section class="inner-page">
 <div class="container">
@@ -1212,17 +1214,649 @@ Todas as visões  permitem consultar o Dia Corrente, Acumulado de 7 Dias e Perí
                             </em></p>
                                 </div>
                             </div>
+      </div>
+      </div>
+    </section>
+
+<!-- Accordion Comprovante de Documentos-->
+
+<section class="inner-page">
+  <div class="container">
+
+    <!-- 1. Comprovante de Documentos: Consulta de Cheque-->
+<div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse1" aria-expanded="false" aria-controls="flush-collapse1">
+        Comprovante de Documentos: Consulta de Cheque
+      </button>
+    </h2>
+    <div id="flush-collapse1" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        Função que permite pesquisar o Status de um Cheque emitido.<br><br>
+        Os dados de Entrada são: <b>Número do Cheque</b>
+        O resultado será apresentado em tela no formato de tabela.<br><br>
+        <b>Observação:</b> Poderá existir mais de uma resposta a um cheque consultado devido a sua numeração já ter reiniciado.<br><br>
+
+        <div class="card">
+          <img class="card-img-top" src="../assets/img/consulta-cheques.png" alt="">
+              <div class="card-body">
+          <p class="card-text"><em>Para exibir a consulta de cheques, acesse: Comprovante de Documento > Consulta de Cheques </em></p>
+              </div>
+          </div>
+
+       </div>
+    </div>
+  </div>
+
+  <!-- 2. Comprovante de Documentos: Aprovação e Consulta-->
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse2" aria-expanded="false" aria-controls="flush-collapse2">
+        Comprovante de Documentos: Aprovação e Consulta
+      </button>
+    </h2>
+    <div id="flush-collapse2" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        <b>Funcionalidade de Uso Exclusivo da Matriz.</b><br><br> 
+        A validação dos Comprovantes é realizado pela Equipe Financeira da Matriz para garantir a qualidade e coerência dos Documentos comprobatórios para Faturamento dos Fretes realizados.<br><br>
+        Função que permite Consultar /Aprovar/Reprovar os Comprovantes de Descarga enviados via Aplicativo Transvale.<br><br>
+        Quando Documento é REPROVADO é disparado ao Aplicativo do Usuário que efetuou o registro, uma notificação informando os dados do Documento recusado e o respectivo Motivo. Por processo, bastará o reenvio do Comprovante.<br><br>
+
+        <div class="card">
+          <img class="card-img-top" src="../assets/img/aprovacao-de-documentos.png" alt="">
+              <div class="card-body">
+          <p class="card-text"><em>Para exibir a consulta de faturamento dos fretes, acesse: Comprovante de Documento > Comprovante de Documentos </em></p>
+              </div>
+          </div>
+
+          <div class="card">
+            <img class="card-img-top" src="../assets/img/comprovante-aprovar-reprovar.png" alt="">
+                <div class="card-body">
+            <p class="card-text"><em>Para aprovar/reprovar/visualizar, basta dar um click duplo sobre o CT-e. </em></p>
+                </div>
+            </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Comprovante de Documentos: Controle de Emissão de Documento-->
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse3" aria-expanded="false" aria-controls="flush-collapse3">
+        Comprovante de Documentos: Controle de Emissão de Documento
+      </button>
+    </h2>
+    <div id="flush-collapse3" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        
+        <b><p style="color: red;">Funcionalidade de uso exclusivo da Matriz e aplicável para controle e gestão da Frota Pesada.  </p></b>
+        Função para Visualizar TODOS os Comprovantes de Documentos Pendentes de Envio. O sistema confronta os CT-e emitido x Comprovante de Descarga, listando todos aqueles que por ventura ainda não foram enviados.<br><br>
+
+        <div class="card">
+          <img class="card-img-top" src="../assets/img/emissao-emissao.png" alt="">
+              <div class="card-body">
+          <p class="card-text"><em>Para exibir o controle de emissão, acesse: Comprovante de Documento > Controle de Malote > Emissão. </em></p>
+              </div>
+          </div>
+
+      </div>
+    </div>
+  </div>
+
+<!-- 4. Comprovante de Documentos: Gestão de Malotes-->
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse4" aria-expanded="false" aria-controls="flush-collapse4">
+        Comprovante de Documentos: Gestão de Malotes (FALTAM IMAGENS)
+      </button>
+    </h2>
+    <div id="flush-collapse4" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        Função para a Gestão e envio dos Malotes entre <b>Filiais x Matriz.</b><br><br>
+        Os documentos que deverão ser considerados neste processo são <b>TODOS</b> os <b>CT-e</b> e <b>Carta Frete</b> que precisam ser enviados à <b>Matriz</b>.<br><br>
+        O Processo está divido da seguinte forma:<br><br>
+        <b>Emissão:</b> Processo de Criação do Malote. O Sistema permite Consultar o Documento através do Scanner ou manualmente informando os dados de acesso <b>(CTe + Série + CPF do Motorista);</b>
+        <ol>
+          <li>O Documento será consultado na base do Maxicon e listado em tela;</li>
+          <li>Informar qual a parcela (1- Adiantamento, 2  - Saldo ou 3 - Ambos) </li>
+          <li>Repetir o passo de identificação para a montagem da lista de documentos;</li>
+          <li>Informar a Filial de Emissão do Malote;</li>
+          <li>Ao final, o sistema gerará uma Capa com um Código de Barras com os dados de identificação da Filial x Total de Documentos que deverá ser anexado a todos os Documentos e postados no Malote;</li>
+        </ol>
+
+        <b>Conferência:</b> Processo de Conferência "Cega" dos documentos Emitidos. Esse processo poderá ser realizado pela Matriz ou Filial;
+        <ol>
+          <li>O sistema validará os documentos lidos e marcará a linha na cor verde os que foram "encontrados";</li>
+          <li>Os documentos não encontrados na lista serão listados e retornados por e-mail ao usuário Emissor para ciência e correção;</li>
+          <li>O Malote permanecerá INCONSISTENTE até que os documentos não identificados sejam reenviados e conferidos;</li>
+        </ol>
+
+        <b>Transferência:</b> permite a transferência dos Malotes Conferidos entre Filiais ou Matriz;
+        <ol>
+          <li>O sistema permite Unir vários Malotes Conferidos em um ÚNICO adicionando novos documentos, gerando um ÚNICO PROTOCOLO (Capa de Malote); </li>
+          <li>Informar qual a Filial que deverá ser TRANSFERIDO;</li>
+          <li>A Filial marcada na TRANSFERÊNCIA efetuará a Conferência seguindo os mesmos procedimentos já citados.</li>
+        </ol>
+
+        <div class="card">
+          <img class="card-img-top" src="../assets/img/.png" alt="">
+              <div class="card-body">
+          <p class="card-text"><em>Para exibir o controle de emissão, acesse: Comprovante de Documento > Controle de Malote > Emissão. </em></p>
+              </div>
+          </div>
+
+          <div class="card">
+            <img class="card-img-top" src="../assets/img/.png" alt="">
+                <div class="card-body">
+            <p class="card-text"><em>Para exibir o controle de emissão, acesse: Comprovante de Documento > Controle de Malote > Emissão. </em></p>
+                </div>
+            </div>
+
+            
+            <div class="card">
+              <img class="card-img-top" src="../assets/img/.png" alt="">
+                  <div class="card-body">
+              <p class="card-text"><em>Para exibir o controle de emissão, acesse: Comprovante de Documento > Controle de Malote > Emissão. </em></p>
+                  </div>
+              </div>
+
+              
+              <div class="card">
+                <img class="card-img-top" src="../assets/img/.png" alt="">
+                    <div class="card-body">
+                <p class="card-text"><em>Para exibir o controle de emissão, acesse: Comprovante de Documento > Controle de Malote > Emissão. </em></p>
+                    </div>
+                </div>
 
                 
+                <div class="card">
+                  <img class="card-img-top" src="../assets/img/.png" alt="">
+                      <div class="card-body">
+                  <p class="card-text"><em>Para exibir o controle de emissão, acesse: Comprovante de Documento > Controle de Malote > Emissão. </em></p>
+                      </div>
+                  </div>
 
+                  
+                  <div class="card">
+                    <img class="card-img-top" src="../assets/img/.png" alt="">
+                        <div class="card-body">
+                    <p class="card-text"><em>Para exibir o controle de emissão, acesse: Comprovante de Documento > Controle de Malote > Emissão. </em></p>
+                        </div>
+                    </div>
+          
 
+                    <div class="card">
+                      <img class="card-img-top" src="../assets/img/.png"alt="">
+                          <div class="card-body">
+                      <p class="card-text"><em>Para exibir o controle de emissão, acesse: Comprovante de Documento > Controle de Malote > Emissão. </em></p>
+                          </div>
+                      </div>
 
-
-
-         
       </div>
+    </div>
+  </div>
 
-<!-- Accordion -->
+  <!-- 5. Comprovante de Documentos/Vale Diesel/Consultar Voucher Vale Diesel-->
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse5" aria-expanded="false" aria-controls="flush-collapse5">
+        Comprovante de Documentos/Vale Diesel/Consultar Voucher Vale Diesel
+      </button>
+    </h2>
+    <div id="flush-collapse5" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+
+Funcionalidade de uso <b>exclusivo dos Postos Conveniados</b> que operam o Vale Diesel Transvale. Tem como objetivo validar o Voucher emitido para uso do Vale Diesel.<br><br>
+Após a emissão do CT-e com o Vale Diesel é impresso um Voucher com os seguintes dados:<br><br>
+
+<li>Dados cadastrais do Motorista + Foto do Motorista;</li>
+<ul><li>A foto será retornada desde que  no cadastro do Motorista exista a foto;</li></ul>
+<li>Data de Emissão;</li>
+<li>Valor do Vale Diesel</li>
+Por processo, o Posto Conveniado, antes do abastecimento, deverá consultar o Voucher validando e conferindo os dados.<br><br>
+Se o Voucher por ventura já estiver utilizado o sistema retornará com os dados da utilização (Data, Valor e Posto), bloqueando qualquer ação do Posto.<br><br>
+Após a validação, o abastecimento é efetivado pelo Posto Conveniado. No final, a Nota Fiscal Eletrônica do Abastecimento será emitida, podendo, nessa mesma tela, ser vinculado ao Voucher.<br><br>
+
+<div class="card">
+  <img class="card-img-top" src="../assets/img/consultar-voucher.png"alt="">
+      <div class="card-body">
+  <p class="card-text"><em>Para exibir o controle de emissão, acesse: Comprovante de Documento > Controle de Malote > Emissão. </em></p>
+      </div>
+  </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. Comprovante de Documentos/Vale Diesel/Relatório de Fechamento Vale Diesel-->
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse6" aria-expanded="false" aria-controls="flush-collapse6">
+        Comprovante de Documentos/Vale Diesel/Relatório de Fechamento Vale Diesel
+      </button>
+    </h2>
+    <div id="flush-collapse6" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        Funcionalidade de uso exclusivo dos Postos Conveniados que operam o Vale Diesel Transvale. Tem como objetivo o controle de uso dos Vale Diesel para posterior cobrança financeira dos Voucher utilizados. O sitema gerá uma pre fatura listando todos os Vales utilizados entre um intervalo de datas.<br><br>
+
+        <div class="card">
+          <img class="card-img-top" src="../assets/img/fechamento-vale-diesel.png"alt="">
+              <div class="card-body">
+          <p class="card-text"><em>Vale Diesel: Relatório de Faturamento Posto Conveniado. Para exibir o relatório de fechamento de vale Diesel, acesse: Comprovante de Documento > Vale Disel > Upload XML Nota Fiscal.</em></p>
+              </div>
+          </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- 7. Comprovante de Documentos/Vale Diesel/Relatório Acompanhamento Vale Diesel-->
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse7" aria-expanded="false" aria-controls="flush-collapse7">
+        Comprovante de Documentos/Vale Diesel/Relatório Acompanhamento Vale Diesel
+      </button>
+    </h2>
+    <div id="flush-collapse7" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        Relatório Gerencial para o acompanhamento em tempo real do uso dos Vale Diesel nos Postos Conveniados. Possui visão entre Voucher x Estabelecimento.<br><br>
+
+        <div class="card">
+          <img class="card-img-top" src="../assets/img/voucher-estabelecimento.png"alt="">
+              <div class="card-body">
+          <p class="card-text"><em>Para exibir o relatório de Emissão Voucher x Estabelecimento, acesse: Comprovante de Documento > Vale Diesel > Relatório Voucher Posto Combustível.</em></p>
+              </div>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- 8. Comprovante de Documentos/Vale Diesel/Relatório Comissão Vale Diesel-->
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse8" aria-expanded="false" aria-controls="flush-collapse8">
+        Comprovante de Documentos/Vale Diesel/Relatório Comissão Vale Diesel
+      </button>
+    </h2>
+    <div id="flush-collapse8" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        Tem como objetivo permitir o acompanhamento em tempo real do valor da comissão do Vale Diesel emitidos.<br><br>
+
+        <div class="card">
+          <img class="card-img-top" src="../assets/img/comissao-diesel.png"alt="">
+              <div class="card-body">
+          <p class="card-text"><em>Para exibir o relatório de Comissão Embarcador, acesse: Comprovante de Documento > Vale Diesel > Listagem Comisões Vale Diesel.</em></p>
+              </div>
+          </div>
+  
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+</section>
+
+
+
+<!-- Gestão de Frota-->
+
+<section class="inner-page">
+  <div class="container">
+
+    <!-- 1. Gestão de Frota/Consultas/Consultar Dados Cadastrais Veículo Frota Leve e Pesada-->
+<div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseUm" aria-expanded="false" aria-controls="flush-collapseUm">
+        Gestão de Frota/Consultas/Consultar Dados Cadastrais Veículo Frota Leve e Pesada
+      </button>
+    </h2>
+    <div id="flush-collapseUm" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        Funcionalidade de uso Exclusivo da Matriz e aplicada para <b>Gestão da Frota Leve e Pesada Transvale.</b><br><br>
+        Permite Consultar por Placa ou Modal os dados cadastrais dos Veículos:<br><br>
+      <li>Placa</li>       
+      <li>Chassi</li>
+      <li>Marca</li>
+      <li>Modelo</li>
+      <li>Cor</li>
+      <li>Renavam</li>
+      <li>Entre outras informações</li>
+        Permite a extração dos dados do relatório no formato Excel.<br><br>
+
+        <div class="card">
+          <img class="card-img-top" src="../assets/img/frota-dados-cadastrais.png" alt="">
+              <div class="card-body">
+          <p class="card-text"><em>Para exibir dados dos veículos, acesse: Gestão de Frotas > Consultas > Dados Cadastrais Veículo. </em></p>
+              </div>
+          </div>
+
+       </div>
+    </div>
+  </div>
+
+  <!-- 2. Gestão de Frota/Consultas/DashBoard Frota Leve e Pesada-->
+<div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseDois" aria-expanded="false" aria-controls="flush-collapseDois">
+        Gestão de Frota/Consultas/DashBoard Frota Leve e Pesada
+      </button>
+    </h2>
+    <div id="flush-collapseDois" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        Funcionalidade de uso Exclusivo da Matriz e aplicada para <b>Gestão da Frota Leve e Pesada Transvale.</b><br><br>
+        Baseado na seleção dos filtros, o relatório é montado com as seguintes informações:<br><br>
+        <li>Idade Média</li>
+        <li>Preço Médio Fipe</li>
+        <li>Mês referência vigente</li>
+        <li>Km Médio</li>
+        <li>Quantidade</li>
+        Os quadros acima no formato de Dashboard e o Grid do relatório no formato analítico.<br><br>
+        O Grid é possível extrair no formato Excel.<br><br>
+
+        <div class="card">
+          <img class="card-img-top" src="../assets/img/frota-dashboard.png" alt="">
+              <div class="card-body">
+          <p class="card-text"><em>Para exibir a Dasboard, acesse: Gestão de Frotas > Consultas > Dashboard - Frota Leve e Pesada. </em></p>
+              </div>
+          </div>
+
+       </div>
+    </div>
+  </div>
+
+<!-- 3. Gestão de Frota/Consultas/DashBoard Histórico Preço Fipe Frota Leve e Pesada-->
+<div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTres" aria-expanded="false" aria-controls="flush-collapseTres">
+        Gestão de Frota/Consultas/DashBoard Histórico Preço Fipe Frota Leve e Pesada 
+      </button>
+    </h2>
+    <div id="flush-collapseTres" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        Funcionalidade de uso Exclusivo da Matriz e aplicada para <b>Gestão da Frota Leve e Pesada Transvale</b>. O objetivo é obter o histórico de preços Fipe.<br><br>
+        Baseado na seleção dos filtros, o relatório é montado com as seguintes informações:<br>
+        <li>Idade Média</li>
+        <li>Preço Médio Fipe</li>
+        <li>Valorização</li>
+        <li>Média KM (Total Veículos)</li>
+        <li>Quantidade</li>
+        Os quadros acima no formato de Dashboard e o Grid do relatório no formato analítico.<br><br>
+        O Grid é possível extrair no formato Excel.<br><br>
+
+        <div class="card">
+          <img class="card-img-top" src="../assets/img/fipe.png" alt="">
+              <div class="card-body">
+          <p class="card-text"><em>texto aqui </em></p>
+              </div>
+          </div>
+
+       </div>
+    </div>
+  </div>
+
+  <!-- 4. Gestão de Frota/Consultas/Relatório de Despesa Frota Leve e Pesada-->
+<div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseQuatro" aria-expanded="false" aria-controls="flush-collapseQuatro">
+        Gestão de Frota/Consultas/Relatório de Despesa Frota Leve e Pesada
+      </button>
+    </h2>
+    <div id="flush-collapseQuatro" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        Funcionalidade de uso Exclusivo da Matriz e aplicada para <b>Gestão da Frota Leve e Pesada Transvale</b>. O objetivo é obter os toais das Despesas por Tipo de Despesa, Centro de Custo e intervalo de datas.<br><br>
+        Baseado na seleção dos filtros, o relatório é montado no formato tabela e com visão Analítica.<br><br>
+        O Grid é possível extrair no formato Excel.<br><br>
+
+        <div class="card">
+          <img class="card-img-top" src="../assets/img/frota-despesa.png" alt="">
+              <div class="card-body">
+          <p class="card-text"><em>Relatório de Despesa Frota Leve e Pesada
+
+          </em></p>
+              </div>
+          </div>
+
+       </div>
+    </div>
+  </div>
+
+  <!-- 5. Gestão de Frota/Consultas/Relatório de Junção Frota Pesada-->
+<div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseCinco" aria-expanded="false" aria-controls="flush-collapseCinco">
+        Gestão de Frota/Consultas/Relatório de Junção Frota Pesada
+      </button>
+    </h2>
+    <div id="flush-collapseCinco" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        Funcionalidade de uso Exclusivo da Matriz e aplicada para <b>Gestão da Frota Leve e Pesada Transvale</b>. O objetivo é obter a informação da junção (Cavalo, Carreta 1, Carreta 2, Carreta 3 e Motorista)  e os totais de Veículos por <b>Modal x Marca e Modelo</b>.<br><br>
+        O Grid é possível extrair no formato Excel.<br><br>
+
+        <div class="card">
+          <img class="card-img-top" src="../assets/img/frota-juncao.png" alt="">
+              <div class="card-body">
+          <p class="card-text"><em>Para exibir o reltório de junçao de frota pesada, acesse: Gestão de Frotas > Consultas > Relatório de Junção - Frota Pesada.</em></p>
+              </div>
+          </div>
+
+       </div>
+    </div>
+  </div>
+
+  <!-- 6. Gestão de Frota/Checklist-->
+<div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeis" aria-expanded="false" aria-controls="flush-collapseSeis">
+        Gestão de Frota/Checklist (FALTAM IMAGENS, NÃO ENCONTREI NO COC)
+      </button>
+    </h2>
+    <div id="flush-collapseSeis" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        Funcionalidade aplicada para <b>Gestão da Frota Pesada Transvale</b>.<br><br>
+        Dependendo do Tipo de Checklist a ser aplicado será registrado/documentado todos os <b>ITENS</b> do Checklist, marcando-os como <b>OK</b>, <b>Não OK</b> ou <b>Não se Aplica</b>. Aos itens marcados como <b>Não Ok</b>, será obrigatório o registro de uma <b>Foto</b> e uma breve descrição do </b>Problema</b>. A estes Itens serão abertos <b>Ordens de Serviço</b> para o reparo/agendamento do problema relatado.<br><br>
+        Poderão ser aplicados <b>Checklists</b> para documentar e registrar processos obrigatórios e regulatórios de acordo com o <b>Modal</b> e atividade do <b>Veículo</b>.<br><br>
+        A funcionalidade Checklist está dividida em:<br><br>
+        Cadastro de <b>Checklist</b>: possibilita o Cadastro de:<br><br>
+        Checklist x Itens;<br><br>
+        Recorrência de Execução do Checklist (determinado em DIAS);<br><br>
+        Indicativo de Integração do Checklist com o Sistema de Manutenção da Frota Transvale;<br><br>
+        Cadastro de Itens;<br><br>
+        Cadastro de Veículo;<br><br>
+        Vinculação Checklist x Veículo;<br><br>
+        Os cadastros aqui realizados determinarão o Comportamento do <b>APP</b> dentro da Execução do Checklist.
+
+        <div class="card">
+          <img class="card-img-top" src="../assets/img/.png" alt="">
+              <div class="card-body">
+          <p class="card-text"><em>texto aqui </em></p>
+              </div>
+          </div>
+
+       </div>
+    </div>
+  </div>
+
+   <!-- 7. Gestão de Frota/Rotograma-->
+<div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSete" aria-expanded="false" aria-controls="flush-collapseSete">
+        Gestão de Frota/Rotograma
+      </button>
+    </h2>
+    <div id="flush-collapseSete" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+      Funcionalidade aplicada para <b>Gestão da Frota Pesada Transvale</b>. Objetivo é facilitar a consulta do Rotograma pelo Motorista da Frota Transvale através do APP.
+      <b>Rotograma</b> ou roteiro de viagem é o documento que baliza e orienta as regras da viagem para uma determinada rota.     
+      Permite o Cadastro de um <b>Rotograma</b> informando os seguintes dados:       
+      <ol>
+      <li><b>Nome</b>: Nome do <b>Rotograma</b>;</li>
+    <li><b>Origem x Destino:</b> Origem e Destino da Rota;</li>
+    <ul><li>Integração com <b>Google Maps</b> para determinar a distância e o tempo estimado da viagem;</li></ul>
+    <li><b>Modal:</b> Modal do Veículo que executará a Rota</li>
+    <li><b>Arquivo:</b> Upload do Arquivo PDF do Rotograma;</li>
+      </ol>
+        <div class="card">
+          <img class="card-img-top" src="../assets/img/frota-rotograma.png" alt="">
+              <div class="card-body">
+          <p class="card-text"><em>Para exibir a tela de rotas, acesse: Gestão de Frotas > Cadastros > Rotograma</em></p>
+              </div>
+          </div>
+
+          <div class="card">
+            <img class="card-img-top" src="../assets/img/rotograma-visualizar.png" alt="">
+                <div class="card-body">
+            <p class="card-text"><em>Para exibir o PDF do rotograma, clique sobre o cadastro</em></p>
+                </div>
+            </div>
+
+            <div class="card">
+              <img class="card-img-top" src="../assets/img/rotograma-adicionar.png" alt="">
+                  <div class="card-body">
+              <p class="card-text"><em>Para criar nova rota, clique em "Adicionar".</em></p>
+                  </div>
+              </div>
+
+              <div class="card">
+                <img class="card-img-top" src="../assets/img/rotograma-editar.png" alt="">
+                    <div class="card-body">
+                <p class="card-text"><em>Para excluir, inativar, ou aprovar arquivos, clique no botão ao lado direito da rota..</em></p>
+                    </div>
+                </div>
+
+       </div>
+    </div>
+  </div>
+
+  <!-- 8. Gestão de Frota/Solicitação de Veículo-->
+<div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOito" aria-expanded="false" aria-controls="flush-collapseOito">
+        Gestão de Frota/Solicitação de Veículo
+      </button>
+    </h2>
+    <div id="flush-collapseOito" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        Permite solicitar eletronicamente um Veículo da Frota Leve. Os dados necessários para a solicitação são: <br><br>           
+        <ol>
+        <li>Nome do Motorista;</li>
+        <li>Data e Hora com a Previsão da Saída;</li>
+        <li>Data e Hora com a Previsão do Retorno;</li>
+        <li>Motivo: Breve descrição com o Motivo da Solicitação.</li>
+       </ol>
+        Após solicitado, o sistema notificará o Usuário Aprovador que avaliará/aprovará a Solicitação. Se <b>Reprovado</b> um Motivo é informado e notificado ao Usuário solicitante.<br><br>
+        Quando <b>Aprovado</b>, o Usuário Solicitante, na data prevista de saída, deverá registrar dentro do intervalo de datas (Saída x Retorno) via APP, o Início e Fim da Viagem, coletando:<br><br>
+        
+        <ol>
+        <li>KM de Saída;</li>
+        <ul>
+          <li>Checklist de Saída (Opcional)</li>
+         </ul>
+        <li>KM de Retorno;</li>
+        <ul><li>Checklist de Retorno (Opcional)</li>
+        </ul>
+        </ol>
+
+        O registro do Início e Fim da Viagem bem como o Checklist são gravados na Plataforma para Gestão e Controle do Responsável da Frota Leve Transvale. </em></p>
+        
+        <div class="card">
+          <img class="card-img-top" src="../assets/img/solicitacao-veiculo.png" alt="">
+              <div class="card-body">
+          <p class="card-text"><em>Para exibir a tela de solicitação de veículo, acesse: Gestão de Frotas, Solicitação de Veículos > Incluir.</em>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img-top" src="../assets/img/solicitacao-veiculo-relatorio.png" alt="">
+              <div class="card-body">
+          <p class="card-text"><em>Para exibir a tela de solicitação de veículo aprovado, reprovado ou cancelado, acesse: Gestão de Frotas, Solicitação de Veículos > Visualizar.</em>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img-top" src="../assets/img/checklist-relatorio.png" alt="">
+              <div class="card-body">
+          <p class="card-text"><em>Para exibir a tela de checklist de veículos, acesse: Gestão de Frotas, Checklist > Visualizar.</em>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img-top" src="../assets/img/checklist-relatorio1.png" alt="">
+              <div class="card-body">
+          <p class="card-text"><em>Para exibir a tela de checklist de veículos, acesse: Gestão de Frotas, Checklist > Relatório.</em>
+          </div>
+        </div>
+  
+           
+
+       </div>
+    </div>
+  </div>
+
+
+   <!-- 9. Gestão Securitária/Motorista de Primeira Viagem-->
+<div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNove" aria-expanded="false" aria-controls="flush-collapseNove">
+        Gestão Securitária/Motorista de Primeira Viagem
+      </button>
+    </h2>
+    <div id="flush-collapseNove" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        Funcionalidade de <b>Uso Exclusivo</b> da Equipe <b>Alcance</b> e aplicável a TODOS os cadastros de Motoristas que se enquadrarem na regra da <b>"Primeira Viagem"</b>.<br><br>
+        Durante o processo de análise os seguintes status são validados:<br><br>
+
+      <ol>
+      <li><b>EM ANÁLISE</b>: Cadastro do Motorista fica com um "bloqueio  parcial";</li>
+      <li><b>NADA CONSTA</b>: Cadastro liberado e enviado para análise da Gerenciadora de Risco Verttice;</li>
+      <ul>
+        <li>Nesse momento a Gerenciadora de Risco Verttice tratará a ficha considerando seus critérios de análises;</li>
+      </ul>
+      <li><b>CONSTA</b>: Cadastro BLOQUEADO pela Equipe Alcance;</li>
+      <ul>
+        <li>O desbloqueio será passível através de formalização para a equipe Comercial/Seguros; </li>
+      </ul>
+        <li><b>ERRO DE CADASTRO</b>: usado quando encontrado inconsistência entre os dados enviados x anexos;</li>
+        <ul>
+          <li>Cadastro liberado e enviado para análise da Gerenciadora de Risco Verttice;</li>
+          <li>Nesse momento a Gerenciadora de Risco Verttice tratará a ficha considerando seus critérios de análises, classificando a ficha como INCONSISTÊNTE ou DIVERGENTE.</li>
+      </ul>
+      </ol>
+
+      <div class="card">
+          <img class="card-img-top" src="../assets/img/gestao-securitaria.png" alt="">
+              <div class="card-body">
+          <p class="card-text"><em>Para exibir a Gestão Securitária da Dashboard, acesse: Gestão Securitária > Dashboard. </em></p>
+              </div>
+          </div>
+
+        <div class="card">
+          <img class="card-img-top" src="../assets/img/gestao-securitaria-historico.png" alt="">
+              <div class="card-body">
+          <p class="card-text"><em>Para exibir a Gestão Securitária da Dashboard, acesse: Gestão Securitária > Histórico. </em></p>
+              </div>
+          </div>
+
+       </div>
+    </div>
+  </div>
+
+  </div>
+
+  <!-- Gestão Securitária-->
+
       
 
   </main><!-- End #main -->
