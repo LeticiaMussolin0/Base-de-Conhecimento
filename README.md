@@ -11,7 +11,7 @@ O projeto é um site de informações detalhadas sobre aplicativo e o sistema pr
 Frontend: HTML, CSS, JavaScript e Bootstrap. 
 Backend: PHP.
 
-Para visualização, acesse: LeticiaMussolin0.github.io
+Para visualização, acesse: transvale.github.io
 
 **Autores**
 Leticia Mussolin e Daniel Jacob. 
