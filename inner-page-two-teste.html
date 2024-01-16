@@ -102,11 +102,18 @@
 
     <h3><span>Instruções </span></h3>
       <p>Selecione o tópico desejado para visualizar as informações.</p>
+    
   </div>
 
 <!-- índice -->
 <section class="inner-page">
 <div class="container">
+
+  <section id="services" class="services">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h3><span>Gestão de Contratos</span></h3>
+      </div>
 
     <!-- Accordion -->
 
@@ -490,19 +497,310 @@
         <div class="accordion-item">
             <h2 class="accordion-header">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
-                Gestão de Contratos/Central de Manifesto Compartilhado/Emissão (REFAZER TUDO)
+                Gestão de Contratos/Central de Manifesto Compartilhado/Emissão
               </button>
             </h2>
             <div id="flush-collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
               <div class="accordion-body">
-               
+                Função que permite a emissão de CTe diretamente pela Plataforma Transvale.<br><br>
+A emissão de CTe contempla todas as operações/emissões já existentes, exceto SÉRIE X.<br><br>
+Quando SUBCONTRATAÇÃO ou OPERAÇÃO MULTIMODAL, O CTe de Origem deverá ser informado para permitir a emissão do CTe Transvale.<br><br>
+O Formulário de Emissão de CTe possui os seguintes filtros:<br><br>
+<ol>
+<li>Data Inicial e Data Final: permite filtrar as Ordens de Carregamento de acordo com o intervalo de datas;</li>
+<li>Contrato: informar o número do Contrato;</li>
+<li>OC: informar o número da Ordem de Carregamento;</li>
+<li>CT-e: informar o número do CT-e (Já emitido);</li>
+<ul>Placa: Informar a Placa;</ul>
+<li>Será listado as Ordens de Carregamento de acordo com a Placa;
+<li>Filial: Lista de Filial;</li>
+<li>Negócio: Tipo de Negócio Frota/Agenciamento;</li>
+<li>Status: Aguardando Emissão, CTe Cancelado, Emissão Finalizada, Erro na Emissão, Na Fila de Emissão, Processando Emissão;</li>
+<li>Usuário OC: lista de usuários emissores das Ordens de Carregamento;</li>
+<li>Usuário CT-e: lista de usuários emissores do CT-e;</li>
+</ol>
+
+<b>O Processo de Emissão de CTe possui as seguintes regras:</b>
+<ol>
+<li>Necessário emissão de <b>Ordem de Carregamento;</b></li>
+<ul>Todas as informações necessárias para a emissão do CTe é contida na Ordem de Carregamento;</ul>
+<li>Vínculo entre Ordem de <b>Carregamento x NFe;</b></li>
+<ul>Informar a NFe de emissão preenchendo os campos do formulário com os dados da NF-e;</ul>
+<ul>Possível informar a chave de acesso: se NFe integrada na Base do Maxicon, os campos são preenchidos automaticamente;</ul>
+<ul>Possível carregar o XML da NFe: os campos são preenchidos automaticamente;</ul>
+<li>Informar o Valor de Mercadoria de Seguro</li>
+<ul>Sistema permite alterar o Valor de Mercadoria de Seguro SEMPRE para CIMA, NUNCA para BAIXO;</ul>
+</ol>
+
+A Ordem de Carregamento emitida é baseada em Contrato x Variante. De acordo com o Tipo de Negócio (Frota ou Agenciamento) o processo de emissão terão regras distintas.<br><br>
+
+<b><p style="color: red;">Tipo de Negócio FROTA</p></b>
+<ol>
+<li>Emitir a Ordem de Carregamento;</li>
+<li>Selecionar a Ordem de Carregamento emitida;</li>
+<li>Vincular a NF-e;</li>
+<li>Informar o Valor de Mercadoria de Seguro;</li>
+<li>Emitir CTe;</li>
+<ul>Confirmar a emissão da MDFe (Opcional);</ul>
+<li>Após emissão, DACT-e, Carta Frete e MDF-e serão emitidos;</li>
+<li>Geração dos documentos no formato PDF podendo ser compartilhados via WhatsApp ou E-mail;</li>
+<li>Quando Tipo de Negócio Tipo Frota, o Motorista informado na Ordem de Carregamento terá disponibilizado no APP os documentos emitidos para Download;</li>
+</ol>
+
+<b><p style="color: red;">Tipo de Negócio AGENCIAMENTO</p></b>
+<ol>
+<li>Emitir a Ordem de Carregamento;</li>
+<li>Selecionar a Ordem de Carregamento emitida;</li>
+<li>Vincular a NF-e;</li>
+<li>Informar o Valor de Mercadoria de Seguro ;</li>
+<li>Confirmar valor do Frete Motorista;</li>
+<p>Frete Motorista carregado conforme parametrização do Contrato vinculado a Ordem de Carregamento;
+  <br>
+  Se Valor do Frete Alterado, o valor do adiantamento é carregado;a</p>
+<ul>1. Valor do Adiantamento calculado conforme parametrização do percentual definido em contrato;</ul>
+<ul>2. O Valor do Adiantamento pode ser alterado para BAIXO, NUNCA acima do limite calculado;</ul>
+<li>Informar os Adicionais de Frete e Valor (Opcional);</li>
+<li>Informar a Data de Entrega;</li>
+<li>Informar o Prazo de Entrega (HORAS);</li>
+<li>Informar o Prazo Descarga (HORAS);</li>
+<li>Observações CTe (Opcional);</li>
+<li>Selecionar o Tipo de Pagamento da Carta Frete;</li>
+<p>1. Se não informado será considerado o Pagamento padrão via Cheque;
+  <br>
+  2. Lista de Carta Frete já usadas no Maxicon:</p>
+<ul>1. CCOVMAIS;</ul>
+<ul>2. CIOTPAG;</ul>
+<ul>3. PAMCARY;</ul>
+</ol>
+
+<ol>
+  <li>Quando Pamcary obrigatório informar Operação, Favorecido e Meio de Pagamento;  </li>
+  <p>1. Favorecido</p>
+  <ul>1. Contratado;</ul>
+  <ul>2. Contratado;</ul>
+  <br>
+
+  <li>Meio de Pagamento:  </li>
+<ul>1. Conta Corrente;</ul>
+<ul>2. Cartão: será considerado o Cartão do Motorista informado no Cadastro de Motorista;</ul>
+<ul>3. Espécie: indica que o Valor do Pedágio calculado será pago/liberado no Saldo da Carta Frete;</ul>
+
+<li>SOLLUS</li>
+<li>SP RISK;</li>
+<li>TARGET</li>
+</ol>
+
+<p>12. Informar o Operador do Pagamento do Pedágio;	</p>
+<ol>
+  <li>Seleção do Pedágio condicionado ao Tipo de Carta Frete;  </li>
+  <li>O Sistema já está parametrizado de acordo com as regras entre CFe x VPe;  </li>
+</ol>
+
+<b><p style="color: red;">STATUS Emissão CTe</p></b>
+<ol>
+<b><li>Aguardando Emissão;</li></b>
+<p>Ordem de Carregamento na lista de Emissão;</p>
+<b><li>CT-e Cancelado;</li></b>
+<p>CT-e Cancelado;</p>
+<b><li>Emissão Finalizada;</li></b>
+<p>Emissão realizada com Sucesso;</p>
+<b><li>Erro na Emissão;</li></b>
+<p>Erro na Emissão;</p>
+<p>Validação conforme regras parametrizadas;</p>
+<b><li>Na Fila de Emissão;</li></b>
+<p>Ordem de Carregamento na Fila de Emissão de CTe;</p>
+<b><li>Processando Emissão;</li></b>
+<p>Ordem de Carregamento da Fila de Processamento de CTe;</p>
+</ol>
+
+<b><p style="color: red;">Sequenciamento </p></b>
+<b>Aguardando Emissão --> Na Fila de Emissão --> Processando Emissão</b>. Os resultados poderão ser:
+<b><li>Emissão Finalizada ou;</li>
+<li>Erro na Emissão</li>
+<li>Retornado o Motivo do erro;</li>
+Passo a Passo Emissão de CTe</b>
+<br><br>
+
+<b><p style="color: red;">Tipo de Negócio FROTA</p></b>
+<b>Passo 1</b>: Selecionar a Ordem de Carregamento;
+<li>Clicar no Botão de Ação e clicar em Emitir CTe;</li>
+
     <div class="card">
-      <img class="card-img-top" src="../assets/img/.png" alt="">
+      <img class="card-img-top" src="../assets/img/frota-1.png" alt="">
       <div class="card-body">
-        <p class="card-text"><em>  </em></p>
+        <p class="card-text"><em>Para exibir a emissão de CT-e, acesse: Gestão de Contratos > Central de Manifesto Compartilhado > Home.</em></p>
         </div>
       </div>
-     
+      <br>
+
+      <b>Passo 2: Aba Dados Gerais</b>
+      <li>Informação do Número Ordem de Carregamento;</li>
+      <li>CPF do Usuário Emissor do CT-e;</li>
+      <li>Filial: Filial da Ordem de Carregamento x Contrato;</li>
+      <li>Tipo de Serviço: Indicador do tipo de operação de Frete conforme parametrização do Contrato;</li>
+      <li>Indicador de Negociação do CTe MultiModal: indica se o Contrato é MultiModal conforme parametrização do Contrato;</li>  
+      <li>Chave de Acesso CTe MultiModal: Preenchido após emissão do CTe de uma operação MultiModal;</li>
+      <br>
+
+      <div class="card">
+        <img class="card-img-top" src="../assets/img/frota-2.png" alt="">
+        <div class="card-body">
+          <p class="card-text"><em>Para exibir os dados gerais, clique em "Emitir CT-e", ao lado da OC.</em></p>
+          </div>
+        </div>
+        <br>
+
+<b>Passo 3: Informar NFe</b>
+<li>Chave de Acesso: informar Chave de Acesso. Se NFe integrada na Base Maxicon, todos os campos são preenchidos automaticamente;</li>
+<li>XML Nota: carregar o arquivo XML da NFe. Após carregamento, todos os campos são preenchidos automaticamente;</li>
+<li>Caso Chave de Acesso e XML da Nota não informado, os campos do formulário deverão ser preenchidos conforme dados da NFe;</li>
++ Adicionar NF: se necessário informar mais uma NFe para a emissão do CTe, basta clicar no respectivo botão e repetir os passos para a outra NFe;<br><br>
+ABA Documentos: Será habilitado para informar o CTe de Origem quando Emissão for para um Tipo de Operação SubContratação ou MultiModal;<br><br>
+Ao Final Pressionar botão Emitir CT-e;<br><br>
+Informar o Valor de Mercadoria e acompanhar a emissão do CT-e;<br><br>
+Informar se Deseja emitir MDF-e;<br><br>
+
+<div class="card">
+  <img class="card-img-top" src="../assets/img/frota-3.png" alt="">
+  <div class="card-body">
+    <p class="card-text"><em>Inclua o XML da NF para que as informações sejam preenchidas de forma automática.</em></p>
+    </div>
+  </div>
+  <br>
+
+Quando CTe possuir Status "Emissão Finalizada", no botão de Ação será habilitado opção para impressão dos Documentos de Transporte emitido. Os documentos serão disponibilizados conforme parametrização do Contrato;
+<li>DACT-e;</li>
+<li>MDF-e;</li>
+<li>Carta Frete;</li><br>
+Se a emissão apresentar <b>"Erro na Emissão"</b> ao clicar na linha do Grid da Ordem de Carregamento, os sistema abrirá os detalhes com a descrição retornada pelo Maxicon.
+
+<div class="card">
+  <img class="card-img-top" src="../assets/img/frota-4.png" alt="">
+  <div class="card-body">
+    <p class="card-text"><em>Para visualizar os detalhes, dê um duplo click sobre a OC. </em></p>
+    </div>
+  </div>
+  <br>
+  
+  <div class="card">
+    <img class="card-img-top" src="../assets/img/frota-5.png" alt="">
+    <div class="card-body">
+      <p class="card-text"><em>Após emissão da CT-e, você poderá visualizá-la ao filtrar o Status: Emissão Finalizada.</em></p>
+      </div>
+    </div>
+    <br>
+
+    <div class="card">
+      <img class="card-img-top" src="../assets/img/frota-6.png" alt="">
+      <div class="card-body">
+        <p class="card-text"><em>Para visualizar os documentos emitidos após emissão da CTE, clique em "Imprimir Documentos".</em></p>
+        </div>
+      </div>
+      <br>
+
+Passo a Passo Emissão de CTe
+<br><br>
+<b><p style="color: red;">Tipo de Negócio AGENCIAMENTO</p></b>
+
+<b>Passo 1</b>: Selecionar a Ordem de Carregamento;
+<li>Clicar no Botão de Ação e clicar em Emitir CTe;</li>
+
+<div class="card">
+  <img class="card-img-top" src="../assets/img/agenciamento-1.png" alt="">
+  <div class="card-body">
+    <p class="card-text"><em>Na mesma interface de emissão de CT-e do tipo Frota, filtre por "Agenciamento".</em></p>
+    </div>
+  </div>
+  <br>
+
+<b>Passo 2: Informar NFe</b>
+<li>Chave de Acesso: informar Chave de Acesso. Se NFe integrada na Base Maxicon, todos os campos são preenchidos automaticamente;</li>
+<li>XML Nota: carregar o arquivo XML da NFe. Após carregamento, todos os campos são preenchidos automaticamente;</li>
+<li>Caso Chave de Acesso e XML da Nota não informado, os campos do formulário deverão ser preenchidos conforme dados da NFe;</li>
++ Adicionar NF: se necessário informar mais uma NFe para a emissão do CTe, basta clicar no respectivo botão e repetir os passos para a outra NFe;<br><br>
+Informar <b>VALOR DE MERCADORIA SEGURO:</b><br><br>
+Passo 2 - Documento: Será habilitado para informar o CTe de Origem quando Emissão for para um Tipo de Operação SubContratação ou MultiModal;<br><br>
+
+<div class="card">
+  <img class="card-img-top" src="../assets/img/agenciamento-2.png" alt="">
+  <div class="card-body">
+    <p class="card-text"><em>Insira o XML da Nota para o preenchimento automático.</em></p>
+    </div>
+  </div>
+  <br>
+<br>
+<b>Passo 3: Ajustar/Confirmar valores de Frete e Adiantamento</b>
+<li>Valor do Frete já vem preenchido conforme parametrização do Contrato;</li>
+<li>O valor do Frete poderá ser alterado SEMPRE para BAIXO. </li>
+<li>O Valor do Adiantamento é calculado levando em consideração o valor do frete x Peso ou Volume da NFe vinculada. O cálculo do adiantamento leva em consideração o valor % parametrizado em Contrato;</li>
+<li>O Valor do Adiantamento poderá ser alterado SEMPRE para BAIXO, podendo ser R$0,00;</li>
+<li>Adicionais de Frete: Opcional de acordo com a negociação;</li>
+<li>Data de Entrega: informar a data prevista para entrega no formato DD/MM/AAAA</li>
+<li>Prazo Entrega (HORAS): informar o prazo de entrega no formato HH:MM;</li>
+<li>Prazo Descarga (HORAS): informar o prazo de descarga no formato HH:MM;</li>
+<li>Observações CTe: campo de uso livre para qualquer informação adicional no CTe (Opcional)</li>
+<br>
+<div class="card">
+  <img class="card-img-top" src="../assets/img/agenciamento-3.png" alt="">
+  <div class="card-body">
+    <p class="card-text"><em>Realize a conferência de valores.</em></p>
+    </div>
+  </div>
+  <br>
+
+<b>Passo 4: Informar o tipo de Pagamento do Frete (Carta Frete);</b>
+<li>Selecionar conforme operação em curso;</li>
+<li>Se nada selecionado, o pagamento do frete será no Cheque;</li>
+<li>Se Selecionado Operador CFe "Pamcary", os campos "Operação", "Favorecido" e "Meio de Pagamento" são obrigatórios;</li>
+<li><b>Operação</b>: Selecionar conforme a característica do Veículo vinculado na Ordem de Carregamento;</li>
+<li><b>Favorecido</b>: Contratado ou Motorista;</li>
+<li>Dados serão considerados de acordo com o cadastro de Motorista/Junção;</li>
+<br>
+<b>Meio de Pagamento</b>:
+<li><b>Conta Corrente</b>: NÃO USADO;</li>
+<li><b>Cartão</b>: Pagamento via Cartão;</li>
+<li><b>Espécie</b>: indicativo que o Pedágio será pago no Cartão e o valor será liberado no Saldo do Pagamento da Carta Frete;</li>
+<br>
+<div class="card">
+  <img class="card-img-top" src="../assets/img/agenciamento-4.png" alt="">
+  <div class="card-body">
+    <p class="card-text"><em>Informe o tipo de pagamento.</em></p>
+    </div>
+  </div>
+  <br>
+
+<b>Passo 5: Informar o Tipo de Pagamento Pedágio.</b>
+<li>Se Pagamento do Frete via Carta Frete Padrão (Cheque), nenhum operador VPe deverá ser informado;</li>
+<li>Se no Passo 4 CFe for informado o Operador Pamcary, o Passo 5 já estará vinculado não cabendo nenhuma ação do usuário.</li>
+<br>
+<div class="card">
+  <img class="card-img-top" src="../assets/img/agenciamento-5.png" alt="">
+  <div class="card-body">
+    <p class="card-text"><em>Confirmação do tipo de pagamento.</em></p>
+    </div>
+  </div>
+  <br><br>
+
+<b>Ao Final Pressionar botão Emitir CT-e;</b><br><br>
+Informar se Deseja emitir MDF-e;<br><br>
+Acompanhar a emissão do CTe;<br><br>
+Quando CTe possuir Status "Emissão Finalizada", no botão de Ação será habilitado opção para impressão dos Documentos de Transporte emitido. Os documentos serão disponibilizados conforme parametrização do Contrato;<br><br>
+<li>DACT-e;</li>
+<li>MDF-e;</li>
+<li>Carta Frete;</li>
+<li>CIOT;</li>
+<br>
+
+<div class="card">
+  <img class="card-img-top" src="../assets/img/agenciamento-6.png" alt="">
+  <div class="card-body">
+    <p class="card-text"><em>Impressão de documentos após CT-e finalizada.</em></p>
+    </div>
+  </div>
+  <br><br>
+    </div>
+  </div>
+</div>
 
   <!-- 10 . Gestão de Contratos/Central de Manifesto Compartilhado/Consultar CT-e Emitido -->
   <div class="accordion accordion-flush" id="accordionFlushExample">
@@ -904,6 +1202,12 @@ Todas as visões  permitem consultar o Dia Corrente, Acumulado de 7 Dias e Perí
 <section class="inner-page">
   <div class="container">
 
+    <section id="services" class="services">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h3><span>Comprovante de Documentos</span></h3>
+        </div>
+
     <!-- 1. Comprovante de Documentos: Consulta de Cheque-->
 <div class="accordion accordion-flush" id="accordionFlushExample">
   <div class="accordion-item">
@@ -990,7 +1294,7 @@ Todas as visões  permitem consultar o Dia Corrente, Acumulado de 7 Dias e Perí
   <div class="accordion-item">
     <h2 class="accordion-header">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse4" aria-expanded="false" aria-controls="flush-collapse4">
-        Comprovante de Documentos: Gestão de Malotes (FALTAM IMAGENS)
+        Comprovante de Documentos: Gestão de Malotes 
       </button>
     </h2>
     <div id="flush-collapse4" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
@@ -1022,56 +1326,49 @@ Todas as visões  permitem consultar o Dia Corrente, Acumulado de 7 Dias e Perí
         </ol>
 
         <div class="card">
-          <img class="card-img-top" src="../assets/img/.png" alt="">
+          <img class="card-img-top" src="../assets/img/malote-1.jpg" alt="">
               <div class="card-body">
-          <p class="card-text"><em>Para exibir o controle de emissão, acesse: Comprovante de Documento > Controle de Malote > Emissão. </em></p>
               </div>
           </div>
 
           <div class="card">
-            <img class="card-img-top" src="../assets/img/.png" alt="">
+            <img class="card-img-top" src="../assets/img/malote-2.jpg" alt="">
                 <div class="card-body">
-            <p class="card-text"><em>Para exibir o controle de emissão, acesse: Comprovante de Documento > Controle de Malote > Emissão. </em></p>
                 </div>
             </div>
 
             
             <div class="card">
-              <img class="card-img-top" src="../assets/img/.png" alt="">
+              <img class="card-img-top" src="../assets/img/malote-3.jpg" alt="">
                   <div class="card-body">
-              <p class="card-text"><em>Para exibir o controle de emissão, acesse: Comprovante de Documento > Controle de Malote > Emissão. </em></p>
                   </div>
               </div>
 
               
               <div class="card">
-                <img class="card-img-top" src="../assets/img/.png" alt="">
+                <img class="card-img-top" src="../assets/img/malote-4.jpg" alt="">
                     <div class="card-body">
-                <p class="card-text"><em>Para exibir o controle de emissão, acesse: Comprovante de Documento > Controle de Malote > Emissão. </em></p>
                     </div>
                 </div>
 
                 
                 <div class="card">
-                  <img class="card-img-top" src="../assets/img/.png" alt="">
+                  <img class="card-img-top" src="../assets/img/malote-5.jpg" alt="">
                       <div class="card-body">
-                  <p class="card-text"><em>Para exibir o controle de emissão, acesse: Comprovante de Documento > Controle de Malote > Emissão. </em></p>
                       </div>
                   </div>
 
                   
                   <div class="card">
-                    <img class="card-img-top" src="../assets/img/.png" alt="">
+                    <img class="card-img-top" src="../assets/img/malote-6.jpg" alt="">
                         <div class="card-body">
-                    <p class="card-text"><em>Para exibir o controle de emissão, acesse: Comprovante de Documento > Controle de Malote > Emissão. </em></p>
                         </div>
                     </div>
           
 
                     <div class="card">
-                      <img class="card-img-top" src="../assets/img/.png"alt="">
+                      <img class="card-img-top" src="../assets/img/malote-7.jpg"alt="">
                           <div class="card-body">
-                      <p class="card-text"><em>Para exibir o controle de emissão, acesse: Comprovante de Documento > Controle de Malote > Emissão. </em></p>
                           </div>
                       </div>
 
@@ -1187,6 +1484,12 @@ Após a validação, o abastecimento é efetivado pelo Posto Conveniado. No fina
 
 <section class="inner-page">
   <div class="container">
+
+    <section id="services" class="services">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h3><span>Gestão de Frota</span></h3>
+        </div>
 
     <!-- 1. Gestão de Frota/Consultas/Consultar Dados Cadastrais Veículo Frota Leve e Pesada-->
 <div class="accordion accordion-flush" id="accordionFlushExample">
@@ -1338,7 +1641,7 @@ Após a validação, o abastecimento é efetivado pelo Posto Conveniado. No fina
   <div class="accordion-item">
     <h2 class="accordion-header">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeis" aria-expanded="false" aria-controls="flush-collapseSeis">
-        Gestão de Frota/Checklist (FALTAM IMAGENS, NÃO ENCONTREI NO COC)
+        Gestão de Frota/Checklist
       </button>
     </h2>
     <div id="flush-collapseSeis" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
@@ -1357,11 +1660,47 @@ Após a validação, o abastecimento é efetivado pelo Posto Conveniado. No fina
         Os cadastros aqui realizados determinarão o Comportamento do <b>APP</b> dentro da Execução do Checklist.
 
         <div class="card">
-          <img class="card-img-top" src="../assets/img/.png" alt="">
+          <img class="card-img-top" src="../assets/img/checklist-1.png" alt="">
               <div class="card-body">
-          <p class="card-text"><em>texto aqui </em></p>
+          <p class="card-text"><em>Para cadastramento dos itens do checklist, acesse: Getsão de Frotas > Cadastros > Checklist.</em></p>
               </div>
           </div>
+
+          <div class="card">
+            <img class="card-img-top" src="../assets/img/checklist-2.png" alt="">
+                <div class="card-body">
+            <p class="card-text"><em>Cadastramento dos itens.</em></p>
+                </div>
+            </div>
+
+            <div class="card">
+              <img class="card-img-top" src="../assets/img/checklist-3.png" alt="">
+                  <div class="card-body">
+              <p class="card-text"><em>Para adição dos Itens do Checklist, acesse: Gestão de Frota > Cadastros > Item.</em></p>
+                  </div>
+              </div>
+
+              <div class="card">
+                <img class="card-img-top" src="../assets/img/checklist-4.png" alt="">
+                    <div class="card-body">
+                <p class="card-text"><em>Para adição dos Veículos do Checklist, acesse: Gestão de Frota > Cadastros > Veículos.</em></p>
+                    </div>
+                </div>
+
+                <div class="card">
+                  <img class="card-img-top" src="../assets/img/checklist-5.png" alt="">
+                      <div class="card-body">
+                  <p class="card-text"><em>Relatório de Visualização de Checklist, acesse: Gestão de Frotas > Checklist > Relatório.
+
+                    <div class="card">
+                      <img class="card-img-top" src="../assets/img/checklist-6.png" alt="">
+                          <div class="card-body">
+                      <p class="card-text"><em>Relatório de Visualização de Checklist: Aprovação/Reprovação de Checklist, acesse: Gestão de Frotas > Checklist > Visualizar.
+
+                  </em></p>
+                      </div>
+                  </div>
+
 
        </div>
     </div>
@@ -1541,6 +1880,12 @@ Após a validação, o abastecimento é efetivado pelo Posto Conveniado. No fina
 
   <section class="inner-page">
     <div class="container">
+
+      <section id="services" class="services">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h3><span>Torre de Controle</span></h3>
+          </div>
   
       <!-- 1. Torre de Controle/Monitoramento de Viagem - Motoristas Terceiros-->
   <div class="accordion accordion-flush" id="accordionFlushExample">
