@@ -191,7 +191,7 @@
             </h2>
             <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
               <div class="accordion-body">
-                A OC poderá ser emitida informando um Número de Contrato e/ou Consultando um Contrato. A consulta do Contrato estará condicionado a parametrização das empresas/filiais na qual o usuário logado tem acesso. Para efetuar a Consulta do Contrato, o botão EXIBIR TODOS deverá ser acionado.<br><br>
+                A OC poderá ser emitida informando um Número de Contrato e/ou Consultando um Contrato. A consulta do Contrato estará condicionado a parametrização das empresas/filiais na qual o usuário logado tem acesso. Se informar o CONTRATO e pesquisar em CONSULTAR, o contrato informado será pesquisado. Se pressionar o botão “EXIBIR TODOS”, todos os contratos abertos serão retornados. <br><br>
                 Os dados de entrada são:<br><br>
                 <li>Número do Contrato;</li>
                 <li>Consulta do Contrato através do botão <b>EXIBIR TODOS</b> (listará todos os contratos em aberto para seleção);</li><br>
@@ -289,38 +289,75 @@
           </div> 
         </div>
 
+
         <div class="accordion-item">
           <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
-              Checklist
+              Consultar Histórico de Viagens
             </button>
           </h2>
           <div id="flush-collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+Esta função permite pesquisar a quantidade de viagens, a existência de bloqueio por Perfil e os dados do Conjunto do Veículo (Motorista, Cavalo e Carretas). Serve como ferramenta de apoio para indentiticar o histórico de viagens e identificar o <b>"Motorista de Primeira Viagem".</b><br><br>
+A consulta poderá ser feita de duas formas:<br><br>
+1. <b>Conjunto</b>: deverá ser informado a <b>Placa</b> e o período em <b>Meses</b> na qual deseja pesquisar a quantidade de viagens.
+
+<ol>
+<li>Será retornado:</li>
+<p><b>1. Motorista</b>: Nome, CPF e Telefones</p>
+<p>1. No Telefone será exibido um ÍCONE do WhatsApp e Telefone; </p>
+<p>2. Ao clicar em qualquer um dos ÍCONES será direcionado para o <b>WhatsApp</b> ou para <b>Ligação</b>;</p>
+
+
+<p><b>2. Placa Carreta 1, 2, 3;</b></p>
+<p><b>3. Quantidade de viagens</b> de acordo com o período em meses informado;</p>
+<p><b>4. Data da última viagem realizada</b>;</p>
+<p><b>5. Bloqueio</b>: dados do bloqueio por Perfil; </p>
+<p>1. O Bloqueio por Perfil é realizado pela Equipe Alcance e Matriz Transvale dentro dos processos de Análise de Perfil Securitário. </p>
+<b>Observação: Os contatos do Motorista são retornados de acordo com o cadastro da Junção</b>.<br><br>
+
+<li><b>CPF/CNPJ</b>: informar <b>CPF</b> ou <b>CNPJ</b></li>
+<p>1. Será retornado os mesmos dados da consulta por <b>CONJUNTO</b>.</p>
+</ol>
+
+<div class="card-group" style="width: 40rem;">
+  <div class="card">
+    <img class="card-img-top" src="../assets/img/historico-viagens.gif" alt="Card image cap">
+    <div class="card-body">
+      <p class="card-text"></p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="../assets/img/historico-viagens-2.png" alt="Card image cap">
+    <div class="card-body">
+      <p class="card-text">Consulta por CPF/CNPJ      </p>
+    </div>
+  </div>
+
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSevenn" aria-expanded="false" aria-controls="flush-collapseSevenn">
+              Checklist
+            </button>
+          </h2>
+          <div id="flush-collapseSevenn" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
             <div class="accordion-body">
               Funcionalidade aplicada para Gestão da Frota Leve e Pesada Transvale.<br><br>
               O Checklist deverá ser executado conforme orientação da Transvale Matriz e será aplicado obedecendo as regras, especificidades, periodicidade e necessidades de cada Modal.<br><br>
               De acordo com o Modal, os Checklists serão carregados conforme regra de Login de Acesso (Motorista x Modal), carregando automaticamente os Checklists vinculados e seus respectivos ITENS de controle/validação/verificação.<br><br>
               Para cada ITEM poderá ser classificado como OK, NÃO OK ou NÃO SE APLICA. Aos itens marcados como NÃO OK, será obrigatório o registro de uma FOTO para documentar o ITEM NÃO OK e uma breve descrição do problema.<br><br>
               Todos os Checklists realizados, independente da classificação dos ITENS serão integrados na Plataforma Transvale para posterior validação, ação e gerenciamento da equipe Transvale Matriz.<br><br>
-              
-              <b>Motorista: </b>Nome, CPF, e Telefones;<br><br>
-              <ol>
-              <li>No Telefone será exibido um ÍCONE do WhatsApp e Telefone;</li>
-              <li>Ao clicar em qualquer um dos ÍCONES será direcionado para o WhatsApp ou para Ligação;</li>
-              <ol>
-                <li><b>Placa Carreta:</b> 1, 2, 3;</li>
-                <li><b>Quantidade de viagens: </b>de acordo com o período em meses informado;</li>
-                <li><b>Data: </b>última viagem realizada;</li>
-                <li><b>Bloqueio: </b>dados do bloqueio por Perfil;</li><br>
-              </ol>
-            </ol>
-          </ol>
-                <li>O Bloqueio por Perfil é realizado pela Equipe Alcance e Matriz Transvale dentro dos processos de Análise de Perfil Securitário. </li> <br>
-            
-                <strong>Observação: Os contatos do Motorista são retornados de acordo com o cadastro da Junção, sendo:</strong><br><br>
-                <li>CPF/CNPJ: informar CPF ou CNPJ; Será retornado os mesmos dados da consulta por CONJUNTO.<br><br>
-              </li>
-
 
                 <div class="card-group" style="width: 40rem;">
                   <div class="card">
@@ -357,7 +394,7 @@
 
                         <div class="card-group" style="width: 40rem;">
                           <div class="card">
-                            <img class="card-img-top" src="../assets/img/Rotograma.PNG" alt="Card image cap">
+                            <img class="card-img-top" src="../assets/img/rotograma.png" alt="Card image cap">
                             <div class="card-body">
                               <h5 class="card-title">ROTOGRAMA</h5>
                               <p class="card-text">Consulta por modelo.</p>
@@ -531,6 +568,38 @@
 
                                 <div class="accordion-item">
                                   <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseElevenn" aria-expanded="false" aria-controls="flush-collapseElevenn">
+                                      Solicitação de Monitoramento
+          
+                                    </button>
+                                  </h2>
+                                  <div id="flush-collapseElevenn" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+
+Função que permite a geração de uma Solicitação de Monitoramento para a Gerenciadora de Risco Verttice via integração. Funcionalidade de uso exclusivo da Equipe Logística Transvale para o monitoramento ativo da Frota.<br><br>
+Por regra existem dois modos de Solicitar o Monitoramento:<br><br>
+<ol>
+<li>Via Ordem de Carregamento: ao criar uma ordem de carregamento, o sistema gerará automaticamente uma Solicitação de Monitoramento para a Gerenciadora de Risco. Os dados considerados são os existentes no Contrato de Frete vinculado a Ordem de Carregamento.</li>
+<p>A Solicitação de Monitoramento via Ordem de Carregamento, indicará que o Veículo está CARREGADO;</p>
+
+<li>Via Formulário de Solicitação: gerará uma Solicitação de Monitoramento para Gerenciadora de Risco Verttice e indicará que o Veículo estará VAZIO.</li>
+<p>O Formulário de Solicitação de Monitoramento será de uso exclusivo da equipe Logística.</p>
+</ol>
+<br>
+Os dados de entrada do formulário são:<br><br>
+<ol>
+<li><b>Placa do Veículo</b>: através da Placa obtém-se os dados do Conjunto (Carreta1, Carreta2, Carreta 3 e Nome do Motorista);</li>
+<li><b>Cliente Origem e Cliente Destino</b>;</li>
+<li><b>Observação</b>.</li>
+</ol>
+</div>
+</div>
+</div>
+
+                                   
+
+                                <div class="accordion-item">
+                                  <h2 class="accordion-header">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwelve" aria-expanded="false" aria-controls="flush-collapseTwelve">
                                       Alteração Comercial
           
@@ -680,20 +749,6 @@
                                   A localização (latitude x longitude) será coletada através do Aplicativo durante sua execução.
                                   <p style="color: red;">PONTO DE ATENÇÃO: os dados com a geolocalização do motorista será através da rede móvel.</p>
 
-                                  <li>Produto;</li>
-                                  <li>Espécie.</li><br>
-    
-                                  Os filtros aplicados irão direcionar a pesquisa. Se nenhum filtro for aplicado, a consulta trará todos os Fretes Cadastrados.<br>
-                                  Após selecionado 1 Frete, as características do Cadastro de Frete serão abertas: <b>Origem x Destino, Distância, Produto, Espécie, Valor do Frete.</b><br><br>
-                                  Ao clicar em <b>"Mais Detalhes"</b>,  os detalhes do Frete serão apresentados: <b>Origem x Destino, Distância, Produto, Espécie, Valor do Frete, Data e Hora Expiração e Observação.</b><br><br>
-                                  Nessa Tela o Motorista terá duas ações:<br><br>
-                                  
-                                  <b>1</b>. Entrar em Contato direto com a Filial do Contrato de Frete via ligação direta ou WhatsApp;<br>
-                                  <b>2</b>. Pegar Frete: a Filial do Contrato será notificada e entrará em contato com o Motorista para negociação.<br><br>
-    
-                                  Será possível também Consultar os Fretes no <b>Mapas</b>. Ao selecionar o Aplicativo irá traçar um raio de 100km tendo como base o local do Motorista. Se existirem Fretes dentro desse raio, os locais serão plotados em tela. Ao clicar nos respectivos PINS, serão listados os Fretes.<br><br>
-                                  <em>Observação: Esta interface é disponibilizada somente a MOTORISTAR TERCEIROS.</em><br><br>
-      
                                   <div class="row row-cols-1 row-cols-md-3 g-4" style="width: 70rem;">
                                     <div class="col">
                                       <div class="card h-100">
@@ -859,7 +914,7 @@
             <div class="col-lg-3 col-md-6 footer-links">
               <h4>Nossos Serviços</h4>
               <ul>
-                <li><i class="bx bx-chevron-right"></i> <a href="https://coc.transvale.com.br/coc">Central de Manifesto Compartilhado</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="https://coc.transvale.com.br/coc">Plataforma Transvale</a></li>
                 <li><i class="bx bx-chevron-right"></i> <a href="https://apps.apple.com/br/app/transvale/id6452913154">App Transvale (Apple)</a></li>
                 <li><i class="bx bx-chevron-right"></i> <a href="https://play.google.com/store/search?q=transvale&c=apps">App Transvale (Google)</a></li>
                 <!--<li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
@@ -883,7 +938,7 @@
 
       <div class="container py-4">
         <div class="copyright">
-          &copy; Copyright <strong><span>Transvale</span></strong>. Todos os direitos reservados
+          Copyright &copy; 2024 <strong><span>Transvale</span></strong>. Todos os direitos reservados
         </div>
         <div class="credits">
           <!-- All the links in the footer should remain intact. -->
